@@ -1,122 +1,92 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "theme": "linden",
+  "name": "Ducky Docs",
+  "banner": {
+    "content": "🦆 Create: Jukebox Display out now! [Download Here](https://modrinth.com/mod/create-jukebox-displays)",
+    "dismissible": true
   },
-  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#663a09",
+    
+    "light": "#A67E26",
+    "dark": "#663a09"
+  },
+  "fonts": {
+    "family": "Fira Code"
+  },
+  "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
+    "products": [
       {
-        "tab": "Guides",
+        "product": "Docs Home",
+        "root": "/",
+        "icon": "home",
         "groups": [
           {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
+            "group": "🦆 Home",
+            "root": "index",
+            "pages": ["index"]
           },
           {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
+            "group": "Minecraft Mods",
+            "icon": "cube",
+            "root": "mods",
+            "pages": ["mods"]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "product": "Minecraft Mods",
+        "root": "mods",
+        "icon": "cube",
         "groups": [
+          
           {
-            "group": "API documentation",
+            "directory": "accordion",
+            "group": "Create: Jukebox Display",
+            "icon": "compact-disc",
+            "root": "mods/createjukeboxdisplay/installation",
+            "expanded": true,
             "pages": [
-              "api-reference/introduction"
+              "mods/createjukeboxdisplay/installation",
+              "mods/createjukeboxdisplay/display_types",
+              "mods/createjukeboxdisplay/source_code",
+              "mods/createjukeboxdisplay/changelog"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "directory": "accordion",
+            "group": "Dye Blocks",
+            "icon": "palette",
+            "root": "mods/dyeblocks/installation",
+            "expanded": false,
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "mods/dyeblocks/installation",
+              "mods/dyeblocks/source_code",
+              "mods/dyeblocks/changelog"
             ]
+          },
+          {
+            "group": "🦆 Back Home",
+            "root": "index",
+            "pages": ["index"]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://ducky.wiki",
+      "github": "https://ducky.wiki/travel/github",
+      "bluesky": "https://ducky.wiki/travel/bluesky",
+      "discord": "https://ducky.wiki/travel/discord",
+      "youtube": "https://ducky.wiki/travel/youtube"
     }
   }
 }

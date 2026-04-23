@@ -1,0 +1,93 @@
+---
+title: Creating Displays
+description: "Create: Jukebox Display adds the Jukebox block as a display source to be used with the Create Mod's display links."
+icon: display
+---
+import { MinecraftRecipe } from "/snippets/MinecraftRecipe.jsx";
+
+The mod adds **3** new display outputs: **Current Song**, **Song Title**, and **Artist Name**
+<hr />
+### What is This Stuff?
+<AccordionGroup>
+    <Accordion title="What are Display Boards?" icon="/images/minecraft_items/create/electron_tube.png">
+        <img src="/images/minecraft_items/create/display_board.png" width={48} />
+        Display Boards are a Create component that allows text to be displayed when given rotational power.
+        <Steps>
+    <Step title="Craft a Display Board" >
+        <Steps>
+            <Step icon="/images/minecraft_items/create/clipboard.png" title="Required Items" />
+            <Step icon="/images/minecraft_items/create/electron_tube.png">
+                [Electron Tube](https://create.fandom.com/wiki/Electron_Tube)
+            </Step>
+            <Step icon="/images/minecraft_items/create/andesite_alloy.png">
+                [Andesite Alloy](https://create.fandom.com/wiki/Andesite_Alloy)
+            </Step>
+        </Steps>
+        
+        <MinecraftRecipe grid={[null,null,null,'andesite_alloy','electron_tube','andesite_alloy',null,null,null]} result={{item: 'display_board', amount: 2}}/>
+    </Step>
+    <Step title="Power your Display Board" >
+        Display Boards run on rotational power from the side using a cogwheel. The exposed cog on the other 3 sides can be used to power additional Display Boards.
+
+        30 RPM of rotation must be provided, but the number of Display Boards can scale up without increasing the power input.
+
+        <Frame caption="At least **30 RPM** is required to power Display Boards">
+            <img src="/images/display_rpm_example.png" />
+        </Frame>
+    </Step>
+
+    
+</Steps>
+    </Accordion>
+
+    <Accordion title="What are Display Links?" icon="/images/minecraft_items/create/transmitter.png">
+        <img src="/images/minecraft_items/create/display_link.png" width={48} />
+        Display Links are a Create component that link Display Sources, such as the Jukebox, to Display Targets, such as a Display Board.
+        <Steps>
+    <Step title="Craft a Display Link" >
+        <Steps>
+            <Step icon="/images/minecraft_items/create/clipboard.png" title="Required Items" />
+            <Step icon="/images/minecraft_items/create/transmitter.png">
+                [Transmitter](https://create.fandom.com/wiki/Transmitter)
+            </Step>
+            <Step icon="/images/minecraft_items/create/brass_casing.png">
+                [Brass Casing](https://create.fandom.com/wiki/Brass_Casing)
+            </Step>
+        </Steps>
+        <MinecraftRecipe grid={[null,null,null,null,'transmitter',null,null,'brass_casing',null]} result={{item: 'display_link'}}/>
+    </Step>
+    {/* <Step title="Link Display Sources to a target" >
+        
+
+    </Step> */}
+
+    
+</Steps>
+    </Accordion>
+</AccordionGroup>
+<hr />
+
+Display Links can only be used with [Display Sources](https://create.fandom.com/wiki/Display_Link#Source_Blocks)
+
+Create: Jukebox Display adds the **Jukebox** as a compatible source, with 3 available output modes.
+
+To link a Jukebox (or any display source) to a Display Board:
+<Steps>
+    <Step title='Power a Display Board' icon="/images/minecraft_items/create/electron_tube.png">
+        Refer to the "What are Display Boards" section to get a Display Board up and running.
+    </Step>
+    <Step title='Link the Source to the Target' icon="/images/minecraft_items/create/display_link.png">
+        Once you've placed your display source (Jukebox,) use the Display Link on your board, then place it on the Jukebox.
+        <Frame caption="Right-click on a Display Board and a display source to link them.">
+            <img src="/images/display_link_example.gif" loop/>
+        </Frame>
+    </Step>
+    <Step title='Configure the Output' icon="/images/minecraft_items/disc_precipice.png">
+        Right-click the <Icon icon="/images/minecraft_items/create/display_link.png" size={24} /> **Display Link** to configure its output.
+        <Frame caption="Right-click on a Display Board and a display source to link them.">
+            <img src="/images/display_link_example.gif" loop/>
+        </Frame>
+    </Step>
+</Steps>
+
+
