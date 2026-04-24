@@ -215,15 +215,6 @@
                 "pages": [
                   "projects/spoofify/ducky_hosted/starter_guide"
                 ] 
-              },
-              {
-                "group": "Self-Hosted",
-                "icon": "code",
-                "root": "projects/spoofify/self_hosted/installation",
-                "pages": [
-                  "projects/spoofify/self_hosted/installation",
-                  "projects/spoofify/self_hosted/installation_twitch"
-                ] 
               }
             ]
           },
