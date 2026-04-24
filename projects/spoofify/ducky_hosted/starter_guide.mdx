@@ -78,7 +78,7 @@ At this point, you should have communication with Ducky and she should guide you
     </Step>
 
     <Step title="First Login">
-        Once everything is set up, it's time to log in for the first time! Head to the URL provided by Ducky and click `Log In` to authorize Spotify
+        Once everything is set up, it's time to log in for the first time! Head to the home page URL provided by Ducky and click `Log In` to authorize Spotify.
     </Step>
 </Steps>
 </Expandable>
@@ -93,7 +93,7 @@ At this point, you should have communication with Ducky and she should guide you
                 You should have prior communication from Ducky, and you should know whether or not you need this step. If not, please touch base before continuing.
             </Note>
 
-            Navigate to https://twitch.tv and create a new account
+            Navigate to https://twitch.tv and create a new account.
         </Step>
 
         <Step stepNumber="1" title="Authorize the Bot">
@@ -105,7 +105,7 @@ At this point, you should have communication with Ducky and she should guide you
         </Step>
 
         <Step stepNumber="2" title="Add the bot to your channel">
-            Join the bot account's Twitch chat on your main account (https://twitch.tv/popout/{username}/chat)
+            Join the bot account's Twitch chat on your main account (https://twitch.tv/popout/{bot_username}/chat)
 
             Run `!join` in the bot's chat, and it will join your channel.
 
@@ -117,11 +117,18 @@ At this point, you should have communication with Ducky and she should guide you
         <Step stepNumber="3">
             <Badge color="yellow">OPTIONAL</Badge> **Mod or VIP the Bot**
 
-            In order to prevent being caught by spam filters, the Spoofify bot will prepend a string of 3 random numbers to each message. [123]
+            In order to prevent being caught by spam filters, the Spoofify bot will prepend a string of 3 random numbers to each message. `[123]`
 
             This can be disabled, though it is required to Mod or VIP the bot to make it immune to spam filters in your chat.
 
             The bot's functionality does not depend on Mod/VIP, and this step is optional if you don't mind the numbers.
+
+            <ResponseField name="/vip bot_username">
+                Adds the bot as a VIP in your chat
+            </ResponseField>
+            <ResponseField name="/mod bot_username">
+                Adds the bot as a Moderator in your chat
+            </ResponseField>
         </Step>
 
         <Step stepNumber="4" title="Run Setup Command">
