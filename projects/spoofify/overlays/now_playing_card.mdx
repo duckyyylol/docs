@@ -1,0 +1,125 @@
+---
+title: "Now Playing Card"
+description: "Displays the current song and album art in a card format"
+---
+
+### Preview
+
+<Frame caption={`Now Playing Card Overlay | Default Settings
+
+https://<spoofify_url>/overlays/now-playing`}>
+    <img src="/images/spoofify_nowplaying_card.png" />
+</Frame>
+
+## Browser Source URL
+```url
+https://{spoofify_url}/overlays/now-playing
+```
+<ResponseField name="spoofify_url" type="🦆 Provided by Ducky" required/>
+
+#### Browser Source Dimensions
+<ResponseField name="width" type="800" required/>
+<ResponseField name="height" type="200"  required/>
+
+{/* #### URL Parameters
+<AccordionGroup>
+    <Accordion title="Alignment" defaultOpen>
+        <ResponseField name="right">
+        Aligns the card to the right side of the window
+
+        ```url
+        http://localhost:1234/overlay/nowplaying?right
+        ```
+        </ResponseField>
+
+        <ResponseField name="left">
+        Aligns the card to the left side of the window
+
+        ```url
+        http://localhost:1234/overlay/nowplaying?left
+        ```
+        </ResponseField>
+
+        <ResponseField name="default" type="middle">
+        Omit parameter for middle alignment
+
+        ```url
+        http://localhost:1234/overlay/nowplaying
+        ```
+        </ResponseField>
+    </Accordion> 
+
+</AccordionGroup>*/}
+
+### Customization
+Customization options can be found on the Spoofify dashboard. Head to the home page and click "Dashboard" at the top, or navigate to the url below.
+```url
+https://{spoofify_url}/dashboard
+```
+<ResponseField name="spoofify_url" type="🦆 Provided by Ducky" required/>
+
+#### Customization Options
+<ResponseField name="Background Mode" type="Gradient | Solid" default="Gradient">
+    Whether the background is one solid color or a gradient.
+</ResponseField>
+<ResponseField name="Animation Style" type="Slide | Flip | Turn" default="Slide">
+    Whether the background is one solid color or a gradient.
+</ResponseField>
+<ResponseField name="Show Album" type="boolean" default="true">
+    Show or hide the album name
+</ResponseField>
+<ResponseField name="Border Radius" type="number" default={4} post={["min 0", "max 40"]}>
+    Corner roundness, in pixels.
+</ResponseField>
+<ResponseField name="Border Width" type="number" default={4} post={["min 0", "max 10"]}>
+    Border thickness, in pixels.
+</ResponseField>
+<ResponseField name="Background Color 1" type="HEX Code" default="#9055a1">
+    <Frame caption="Default Background Color 1">
+        <Color variant="compact">
+            <Color.Item value="#9055a1b3" />
+        </Color>
+    </Frame>
+
+    **Gradient**: The first color of the gradient
+
+    **Solid**: The solid background color
+</ResponseField>
+<ResponseField name="Background Color 2" type="HEX Code" default="#27132c">
+    <Frame caption="Default Background Color 2">
+        <Color variant="compact">
+            <Color.Item value="#27132cb3" />
+        </Color>
+    </Frame>
+
+    **Gradient**: The second color of the gradient
+
+    **Solid**: Not used
+</ResponseField>
+<ResponseField name="Border Color" type="HEX Code" default="#27132c">
+    <Frame caption="Default Border Color">
+        <Color variant="compact">
+            <Color.Item value="#27132c" />
+        </Color>
+    </Frame>
+
+    The color of the border.
+</ResponseField>
+<ResponseField name="Accent Text Color" type="HEX Code" default="#e7aaff">
+    <Frame caption="Default Accent Text Color">
+        <Color variant="compact">
+            <Color.Item value="#e7aaff" />
+        </Color>
+    </Frame>
+
+    The color of the "Now Playing" and album texts.
+</ResponseField>
+<ResponseField name="Shadow Color" type="HEX Code" default="#561269">
+    <Frame caption="Default Shadow Color">
+        <Color variant="compact">
+            <Color.Item value="#561269b9" />
+        </Color>
+    </Frame>
+
+    The color of the shadow behind the album art.
+</ResponseField>
