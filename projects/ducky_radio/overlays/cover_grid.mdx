@@ -1,0 +1,58 @@
+---
+title: "Cover Art Grid"
+description: "Displays a grid of configurable dimensions of previously played tracks' cover art"
+---
+
+### Preview
+##### The blue background is removed when used as a browser source
+
+<Frame caption={`Cover Art Grid Overlay
+
+http://localhost:1234/overlay/art/cover/grid?radius=8&cols=6`}>
+    <img src="/images/duckyradio_screenshots/covergrid.png" />
+</Frame>
+
+## Browser Source URL
+```url
+http://localhost:1234/overlay/art/cover/grid
+```
+#### Browser Source Dimensions
+<ResponseField name="width" type="variable" required/>
+<ResponseField name="height" type="variable"  required/>
+
+#### URL Parameters
+ <ResponseField name="limit" type="number" default={30}>
+ Configure the number of images listed
+
+ **Affects the height of the overlay** *(May affect the width of the overlay)*
+
+ ```url
+ http://localhost:1234/overlay/art/cover/grid?limit=30
+ ```
+ </ResponseField>
+ <ResponseField name="cols" type="number" default={5}>
+ Configure the number of columns of images
+
+ **Affects the width of the overlay** *(May affect the height of the overlay)*
+
+ ```url
+ http://localhost:1234/overlay/art/cover/grid?cols=5
+ ```
+ </ResponseField>
+ <ResponseField name="radius" type='number | "circle"' default="0 (square)">
+        Adjusts the border radius (roundness) of the images
+
+        #### Circular
+        ```css
+        http://localhost:1234/overlay/art/cover/grid?radius=circle /* Circular Image */
+        ```
+        #### Rounded (Custom Radius)
+        ```css
+        http://localhost:1234/overlay/art/cover/grid?radius=12 /* Custom Radius */
+        ```
+
+        #### Default
+        ```css
+        http://localhost:1234/overlay/art/cover/grid /* Square Radius (no radius) */
+        ```
+        </ResponseField>

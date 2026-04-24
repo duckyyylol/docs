@@ -1,0 +1,32 @@
+---
+title: "Track History"
+description: "Displays a list of configurable length of previously played tracks"
+---
+
+### Preview
+##### The blue background is removed when used as a browser source
+
+<Frame caption={`Track History Overlay
+
+http://localhost:1234/overlay/history`}>
+    <img src="/images/duckyradio_screenshots/history.png" />
+</Frame>
+
+## Browser Source URL
+```url
+http://localhost:1234/overlay/history
+```
+#### Browser Source Dimensions
+<ResponseField name="width" type="≤800" required/>
+<ResponseField name="height" type="variable"  required/>
+
+#### URL Parameters
+ <ResponseField name="limit" type="number" default={5}>
+ Configure the number of songs listed
+
+ **Affects the height of the overlay**
+
+ ```url
+ http://localhost:1234/overlay/history?limit=5
+ ```
+ </ResponseField>

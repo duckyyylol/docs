@@ -138,13 +138,12 @@
             "icon": "eye",
             "directory": "card",
             "pages": [
-              {
-                "group": "Now Playing",
-                "pages": [
-                  "projects/ducky_radio/overlays/now_playing_card"
-
-                ]
-              }
+              "projects/ducky_radio/overlays/now_playing_card",
+              "projects/ducky_radio/overlays/cover_art",
+              "projects/ducky_radio/overlays/cover_grid",
+              "projects/ducky_radio/overlays/cover_vinyl",
+              "projects/ducky_radio/overlays/last_5"
+              
             ]
           },
           {
@@ -218,7 +217,7 @@
     }
   },
   "contextual": {
-    "options": ["copy", "view"],
+    "options": ["view", "copy"],
     "display": "header"
   }
 }

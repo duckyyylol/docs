@@ -1,0 +1,98 @@
+---
+title: "Cover Art"
+description: "Displays the current track's cover art"
+---
+
+### Preview
+##### The blue background is removed when used as a browser source
+
+<Frame caption={`Cover Art Overlay
+
+http://localhost:1234/overlay/art/cover?large&radius=circle`}>
+    <img src="/images/duckyradio_screenshots/coverart.png" />
+</Frame>
+
+## Browser Source URL
+```url
+http://localhost:1234/overlay/art/cover
+```
+#### Browser Source Dimensions
+<ResponseField name="width" type="variable" required/>
+<ResponseField name="height" type="variable"  required/>
+
+#### URL Parameters
+<AccordionGroup>
+    <Accordion title="Size" defaultOpen>
+        <ResponseField name="small">
+        Displays a small image
+
+        **Dimensions** | `128 x 128`
+
+        ```url
+        http://localhost:1234/overlay/art/cover?small
+        ```
+        </ResponseField>
+
+        <ResponseField name="large">
+        Displays a large image
+
+        **Dimensions** | `1024 x 1024`
+
+        ```url
+        http://localhost:1234/overlay/art/cover?large
+        ```
+        </ResponseField>
+
+        <ResponseField name="default" type="medium">
+        Displays a medium-sized image (default)
+
+        **Dimensions** | `512 x 512`
+
+        ```url
+        http://localhost:1234/overlay/art/cover
+        ```
+        </ResponseField>
+    </Accordion>
+
+    <Accordion title="Border Radius">
+        <ResponseField name="radius" type='number | "circle"' default="0 (square)">
+        Adjusts the border radius (roundness) of the image
+
+        #### Circular
+        ```css
+        http://localhost:1234/overlay/art/cover?radius=circle /* Circular Image */
+        ```
+        #### Rounded (Custom Radius)
+        ```css
+        http://localhost:1234/overlay/art/cover?radius=12 /* Custom Radius */
+        ```
+
+        #### Default
+        ```css
+        http://localhost:1234/overlay/art/cover /* Square Radius (no radius) */
+        ```
+        </ResponseField>
+    </Accordion>
+
+    <Accordion title="Spin">
+        <ResponseField name="spin" type='0 = Counter-Clockwise | 1 = Clockwise' default="none">
+        Adjusts the direction in which the image spins
+
+        #### Default (static image)
+        ```css
+        http://localhost:1234/overlay/art/cover
+        ```
+
+        #### Counter-Clockwise
+        ```css
+        http://localhost:1234/overlay/art/cover?spin=0
+        ```
+        #### Clockwise
+        ```css
+        http://localhost:1234/overlay/art/cover?spin=1
+        ```
+
+        </ResponseField>
+    </Accordion>
+
+</AccordionGroup>

@@ -1,0 +1,41 @@
+---
+title: "Spinning Vinyl"
+description: "Displays a spinning vinyl record featuring the current song's cover art"
+---
+
+### Preview
+##### The blue background is removed when used as a browser source
+
+<Frame caption={`Spinning Vinyl Overlay
+
+http://localhost:1234/overlay/art/cover/vinyl`}>
+    <img src="/images/duckyradio_screenshots/vinyl.png" />
+</Frame>
+
+## Browser Source URL
+```url
+http://localhost:1234/overlay/art/cover/vinyl
+```
+#### Browser Source Dimensions
+<ResponseField name="width" type="610" required/>
+<ResponseField name="height" type="610"  required/>
+
+#### URL Parameters
+        <ResponseField name="spin" type='0 = Counter-Clockwise | 1 = Clockwise' default="none">
+        Adjusts the direction in which the image spins
+
+        #### Default (static image)
+        ```css
+        http://localhost:1234/overlay/art/cover/vinyl
+        ```
+
+        #### Counter-Clockwise
+        ```css
+        http://localhost:1234/overlay/art/cover/vinyl?spin=0
+        ```
+        #### Clockwise
+        ```css
+        http://localhost:1234/overlay/art/cover/vinyl?spin=1
+        ```
+
+        </ResponseField>

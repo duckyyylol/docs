@@ -1,5 +1,51 @@
 ---
-title: "Card"
-description: ""
+title: "Now Playing Card"
+description: "Displays the current song and album art in a card format"
 ---
-h
+
+### Preview
+##### The blue background is removed when used as a browser source
+
+<Frame caption={`Now Playing Card Overlay
+
+http://localhost:1234/overlay/nowplaying`}>
+    <img src="/images/duckyradio_screenshots/nowplaying.png" />
+</Frame>
+
+## Browser Source URL
+```url
+http://localhost:1234/overlay/nowplaying
+```
+#### Browser Source Dimensions
+<ResponseField name="width" type="800" required/>
+<ResponseField name="height" type="175"  required/>
+
+#### URL Parameters
+<AccordionGroup>
+    <Accordion title="Alignment" defaultOpen>
+        <ResponseField name="right">
+        Aligns the card to the right side of the window
+
+        ```url
+        http://localhost:1234/overlay/nowplaying?right
+        ```
+        </ResponseField>
+
+        <ResponseField name="left">
+        Aligns the card to the left side of the window
+
+        ```url
+        http://localhost:1234/overlay/nowplaying?left
+        ```
+        </ResponseField>
+
+        <ResponseField name="default" type="middle">
+        Omit parameter for middle alignment
+
+        ```url
+        http://localhost:1234/overlay/nowplaying
+        ```
+        </ResponseField>
+    </Accordion>
+
+</AccordionGroup>
