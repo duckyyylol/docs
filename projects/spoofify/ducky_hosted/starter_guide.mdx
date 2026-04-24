@@ -4,6 +4,128 @@ sidebarTitle: "Starter Guide"
 icon: "book-open"
 ---
 
-<Warning>
+<Note>
     This is the guide for Ducky-hosted Spoofify. For the self-hosted installation guide, see [this page](../self_hosted/installation).
-</Warning>
+</Note>
+
+In order to run Spoofify, it is required to create a Spotify Developer application and pass the credentials to the app.
+
+At this point, you should have communication with Ducky and she should guide you through the process. This guide serves as a supplemental resource to help you through the specifics.
+
+### Setting up Spoofify
+<Expandable title="Steps to set up Spoofify">
+    <Steps>
+    <Step title="Create a Spotify Developer Application">
+        This is the step that generates the required credentials for Spoofify to fetch data from your Spotify account.
+
+        <Note>
+            As of February 11 2026, a Spotify Premium account is required to access developer resources. Learn more about this Spotify change [here](https://developer.spotify.com/blog/2026-02-06-update-on-developer-access-and-platform-security)
+
+            <Expandable title="Opinion">
+                This change is harmful to the community building apps with Spotify for many reasons. The most glaring of them are:
+                - Developers now have to be a Spotify Premium subscriber to experiment with the Spotify API.
+                - Any given Developer is limited to a single application, an arbitrary limitation that hinders experimentation.
+                - Any given application in "development mode" (unapproved) is limited to 5 total users, including the developer themself (people who can log in using it) 
+                - A developer who wishes to exceed the new limits must be "approved," which involves being an established company/enterprise building a Spotify integration.
+                  - The approval process is not intended for hobbyists/personal projects in any way, per Spotify's own words.
+
+                Spotify has essentially killed any ounce of developer trust they had left. These changes follow the quiet disabling of app creation and subsequent ignoring of developers who raised concerns about it. Building an app on Spotify now requires giving money to Spotify or being a large business, all while Spotify is actively exploiting and diminishing creators.     
+
+                ###### If you so please, let Spotify know how this change hurts the developer community on [this thread](https://community.spotify.com/t5/Spotify-for-Developers/February-2026-Spotify-for-Developers-update-thread/m-p/7330564)
+            </Expandable>
+        </Note>
+
+        Navigate to https://developer.spotify.com/dashboard, choose `Create app`, and enter the following information:
+
+        <Expandable title="Options">
+            <ParamField body="App Name" required>
+            The public-facing name of the application. (What you see when you log in)
+        </ParamField>
+
+        <ParamField body="App Description" required>
+            A concise description of what the app does. 
+
+            ```
+            Displays currently playing song + queue management
+            ```
+        </ParamField>
+
+        <ParamField body="Redirect URI" post={["🦆 Provided by Ducky"]} required>
+            The URL that Spotify will redirect you to after logging in.
+        </ParamField>
+
+        <ParamField body="APIs/SDKs" required>
+            Enable only `Web API`
+        </ParamField>
+        </Expandable>
+
+        Choose `Save` (or `Create`) to create the application.
+    </Step>
+
+    <Step title="Provide Application Credentials">
+        Once your application is created, copy the `Client ID` and provide it to Ducky.
+
+        Choose `View client secret`, then copy the `Client Secret` and provide it to Ducky.
+        - *Do not ever share the Client Secret with anyone else. Treat it like a password to your dev application.*
+    </Step>
+
+    <Step title="Ducky's Turn">
+        Now that the developer application is created, it's Ducky's turn to work some magic! (start the app)
+
+        We'll continue to the next step once that's done. Ducks work at their own pace, you know.
+    </Step>
+
+    <Step title="First Login">
+        Once everything is set up, it's time to log in for the first time! Head to the URL provided by Ducky and click `Log In` to authorize Spotify
+    </Step>
+</Steps>
+</Expandable>
+
+### Setting up the Twitch Bot
+<Expandable title="Steps to set up the Twitch Bot" defaultOpen>
+    <Steps>
+        <Step stepNumber="0">
+            <Badge color="yellow">OPTIONAL</Badge> **Create the Bot Account**
+
+            <Note>
+                You should have prior communication from Ducky, and you should know whether or not you need this step. If not, please touch base before continuing.
+            </Note>
+
+            Navigate to https://twitch.tv and create a new account
+        </Step>
+
+        <Step stepNumber="1" title="Authorize the Bot">
+            Once the Twitch account being used is established, head to the URL provided by Ducky to log in with the bot account via Twitch.
+
+            <Note>
+                If Ducky is hosting the bot account for you, continue to step 2.
+            </Note>
+        </Step>
+
+        <Step stepNumber="2" title="Add the bot to your channel">
+            Join the bot account's Twitch chat (https://twitch.tv/popout/{username}/chat)
+
+            Run `!join` using the channel you want the bot to join.
+
+            <Note>
+                `!leave` can be used to force the bot to leave your Twitch chat
+            </Note>
+        </Step>
+
+        <Step stepNumber="3">
+            <Badge color="yellow">OPTIONAL</Badge> **Mod or VIP the Bot**
+
+            In order to prevent being caught by spam filters, the Spoofify bot will prepend a string of 3 random numbers to each message. [123]
+
+            This can be disabled, though it is required to Mod or VIP the bot to make it immune to spam filters in your chat.
+
+            The bot's functionality does not depend on Mod/VIP, and this step is optional if you don't mind the numbers.
+        </Step>
+
+        <Step stepNumber="4" title="Run Setup Command">
+            The Spoofify bot comes with a simple setup command, `!setup`, that creates the basic configuration and runs through the available bot settings.
+
+            Run `!setup` in your Twitch chat and acknowledge the prompts that follow.
+        </Step>
+    </Steps>
+</Expandable>
