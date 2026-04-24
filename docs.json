@@ -145,44 +145,44 @@
           },
           {
             "group": "API Reference",
-            "root": "projects/ducky_radio/api_Reference",
+            "root": "projects/ducky_radio/Api_Reference",
             "icon": "globe",
             "directory": "card",
             "pages": [
-              "projects/ducky_radio/api_Reference/introduction",
+              "projects/ducky_radio/Api_Reference/introduction",
               {
                 "group": "Endpoints",
                 "icon": "webhook",
                 "pages": [
-              "projects/ducky_radio/api_Reference/endpoint/get/current_track",
-              "projects/ducky_radio/api_Reference/endpoint/get/current_track_title",
-              "projects/ducky_radio/api_Reference/endpoint/get/current_track_artist",
-              "projects/ducky_radio/api_Reference/endpoint/get/track_history",
-              "projects/ducky_radio/api_Reference/endpoint/get/cider/playback_status",
-              "projects/ducky_radio/api_Reference/endpoint/get/cider/playback_volume",
-              "projects/ducky_radio/api_Reference/endpoint/post/cider/playback_volume",
-              "projects/ducky_radio/api_Reference/endpoint/post/cider/play_song_by_id",
-              "projects/ducky_radio/api_Reference/endpoint/post/cider/play",
-              "projects/ducky_radio/api_Reference/endpoint/post/cider/pause",
-              "projects/ducky_radio/api_Reference/endpoint/post/cider/skip",
-              "projects/ducky_radio/api_Reference/endpoint/post/cider/previous",
-              "projects/ducky_radio/api_Reference/endpoint/get/icecast/playback_status",
-              "projects/ducky_radio/api_Reference/endpoint/get/lastfm/playback_status"
+              "projects/ducky_radio/Api_Reference/endpoint/get/current_track",
+              "projects/ducky_radio/Api_Reference/endpoint/get/current_track_title",
+              "projects/ducky_radio/Api_Reference/endpoint/get/current_track_artist",
+              "projects/ducky_radio/Api_Reference/endpoint/get/track_history",
+              "projects/ducky_radio/Api_Reference/endpoint/get/cider/playback_status",
+              "projects/ducky_radio/Api_Reference/endpoint/get/cider/playback_volume",
+              "projects/ducky_radio/Api_Reference/endpoint/post/cider/playback_volume",
+              "projects/ducky_radio/Api_Reference/endpoint/post/cider/play_song_by_id",
+              "projects/ducky_radio/Api_Reference/endpoint/post/cider/play",
+              "projects/ducky_radio/Api_Reference/endpoint/post/cider/pause",
+              "projects/ducky_radio/Api_Reference/endpoint/post/cider/skip",
+              "projects/ducky_radio/Api_Reference/endpoint/post/cider/previous",
+              "projects/ducky_radio/Api_Reference/endpoint/get/icecast/playback_status",
+              "projects/ducky_radio/Api_Reference/endpoint/get/lastfm/playback_status"
                 ] 
               },
               {
                 "group": "Types",
                 "icon": "brackets-curly",
                 "pages": [
-              "projects/ducky_radio/api_Reference/types/track",
-              "projects/ducky_radio/api_Reference/types/apple_music_nowplaying_response",
-              "projects/ducky_radio/api_Reference/types/apple_music_artwork",
-              "projects/ducky_radio/api_Reference/types/apple_music_play_params",
-              "projects/ducky_radio/api_Reference/types/apple_music_preview",
-              "projects/ducky_radio/api_Reference/types/icecast_server_status",
-              "projects/ducky_radio/api_Reference/types/icecast_server_statistics",
-              "projects/ducky_radio/api_Reference/types/icecast_server_source",
-              "projects/ducky_radio/api_Reference/types/lastfm_nowplaying_response"
+              "projects/ducky_radio/Api_Reference/types/track",
+              "projects/ducky_radio/Api_Reference/types/AppleMusicNowPlayingResponse",
+              "projects/ducky_radio/Api_Reference/types/AppleMusicArtwork",
+              "projects/ducky_radio/Api_Reference/types/AppleMusicPlayParams",
+              "projects/ducky_radio/Api_Reference/types/AppleMusicPreview",
+              "projects/ducky_radio/Api_Reference/types/IcecastServerStatus",
+              "projects/ducky_radio/Api_Reference/types/IcecastServerStatistics",
+              "projects/ducky_radio/Api_Reference/types/IcecastServerSource",
+              "projects/ducky_radio/Api_Reference/types/LastFMNowPlayingResponse"
 
                 ] 
               }
