@@ -1,0 +1,35 @@
+---
+title: "Track Reference"
+sidebarTitle: "Track"
+---
+#### Properties
+<ResponseField name="id" type="string" post={["lowercase"]}>
+    The unique identifier of this track
+</ResponseField> 
+<ResponseField name="hash" type="string">
+    Base64-encoded information about this track
+</ResponseField>
+<ResponseField name="lastPlayedTimestamp" type="number">
+    Unix epoch timestamp at which the track was last played, in milliseconds.
+</ResponseField>
+<ResponseField name="title" type="string" post={['url-encoded']}>
+    The title of this track, url-encoded
+</ResponseField>
+<ResponseField name="artist" type="string" post={['url-encoded']}>
+    The artist of this track, url-encoded
+</ResponseField>
+<ResponseField name="album" type="string | null" post={['url-encoded']}>
+    The album of this track, url-encoded, if available
+</ResponseField>
+<ResponseField name="imageUrl" type="string | null">
+    The album art of this track, if available
+</ResponseField>
+<ResponseField name="genres" type="string[]">
+    The genres of this track, if genre data is provided by the provider API
+</ResponseField>
+<ResponseField name="provider" type="cider | lastfm | icecast">
+    The provider from which this track is being played
+</ResponseField>
+<ResponseField name="has_controls" type="boolean">
+    Whether or not this track's provider allows controls via the API
+</ResponseField>

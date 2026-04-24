@@ -1,0 +1,50 @@
+---
+title: "API Introduction"
+sidebarTitle: "Introduction"
+icon: "hand-wave"
+---
+<Columns cols={3}>
+    <Columns cols={1}>
+        Find the documentation you're looking for.
+
+        Continue reading for an introduction to the Ducky Radio API
+    </Columns>
+    <Card title="API Endpoints" icon="webhook" href="endpoint" cta="Explore API Endpoints" />
+    <Card title="Types" icon="brackets-curly" href="types" cta="View Type Definitions" /> 
+</Columns>
+<hr />
+## Authentication
+##### There no authentication required. Ducky Radio is designed to run and be accessed locally.
+
+## Connection Info
+##### Ducky Radio runs on port `1234` by default
+Once running, the API can be accessed at [`http://localhost:1234/api`](http://localhost:1234/api)
+
+## Sending your First Request
+##### Once Ducky Radio is running, you can test the API's functionality with a simple GET request.
+<Steps>
+    <Step title="Play Music">
+        Play a song using the connected provider of your choice. If you can view the ducky radio logs, wait for the `newTrack` event to be fired before continuing.
+    </Step>
+    <Step title="Send GET Request">
+        Run the following command in the terminal of your choice
+        
+        ```bash
+        curl --request GET \
+        --url http://localhost:1234/api/tracks/nowplaying
+        ```
+
+    </Step>
+    <Step title="😎 Observe">
+        You should receive a JSON response. It will either be a [Track](types/track) object, or an object with an `error` string.
+        
+        [See Endpoint Documentation](endpoint/get/current_track.mdx)
+    </Step>
+</Steps>
+
+<hr />
+
+Once you've got the API up and running, continue to the [Endpoints](endpoints) section to learn about all of the ways to interact with Ducky Radio over HTTP
+
+<Card title="API Endpoints" icon="webhook" href="endpoint" cta="Explore API Endpoints"/>
+<Card title="Types" icon="brackets-curly" href="types" cta="View Type Definitions" /> 

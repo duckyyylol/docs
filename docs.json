@@ -8,12 +8,19 @@
   },
   "colors": {
     "primary": "#663a09",
-    
     "light": "#A67E26",
     "dark": "#663a09"
   },
   "fonts": {
     "family": "Fira Code"
+  },
+  "api": {
+    "mdx": {
+      "server": "http://localhost:1234/"
+    },
+    "playground": {
+      "display": "simple"
+    }
   },
   "favicon": "/favicon.png",
   "navigation": {
@@ -26,13 +33,46 @@
           {
             "group": "🦆 Home",
             "root": "index",
-            "pages": ["index"]
+            "pages": [
+              "index"
+            ]
           },
           {
             "group": "Minecraft Mods",
             "icon": "cube",
-            "root": "mods",
-            "pages": ["mods"]
+            "pages": [
+              {
+                "group": "Create: Jukebox Display",
+                "root": "mods/createjukeboxdisplay",
+                "icon": "compact-disc"
+              },
+              {
+                "group": "Dye Blocks",
+                "root": "mods/dyeblocks",
+                "icon": "palette"
+              }
+            ]
+          },
+          {
+            "group": "Open Source Projects",
+            "icon": "code-branch",
+            "pages": [
+              {
+                "group": "Ducky Radio",
+                "root": "projects/ducky_radio",
+                "icon": "radio"
+              },
+              {
+                "group": "Spoofify",
+                "root": "projects/spoofify",
+                "icon": "spotify"
+              },
+              {
+                "group": "Duckylib",
+                "root": "projects/duckylib",
+                "icon": "duck"
+              }
+            ]
           }
         ]
       },
@@ -41,7 +81,6 @@
         "root": "mods",
         "icon": "cube",
         "groups": [
-          
           {
             "directory": "accordion",
             "group": "Create: Jukebox Display",
@@ -70,7 +109,77 @@
           {
             "group": "🦆 Back Home",
             "root": "index",
-            "pages": ["index"]
+            "pages": [
+              "index"
+            ]
+          }
+        ]
+      },
+      {
+        "product": "Ducky Radio",
+        "icon": "radio",
+        "root": "projects/ducky_radio",
+        "groups": [
+          {
+            "group": "Introduction",
+            "root": "projects/ducky_radio/introduction",
+            "icon": "hand-wave"
+          },
+          {
+            "group": "Browser Overlays",
+            "root": "projects/ducky_radio/overlays",
+            "icon": "eye",
+            "directory": "card",
+            "pages": [
+              {
+                "group": "Now Playing",
+                "pages": [
+                  "projects/ducky_radio/overlays/now_playing_card"
+
+                ]
+              }
+            ]
+          },
+          {
+            "group": "API Reference",
+            "root": "projects/ducky_radio/api_Reference",
+            "icon": "globe",
+            "directory": "card",
+            "pages": [
+              "projects/ducky_radio/api_Reference/introduction",
+              {
+                "group": "Endpoints",
+                "icon": "webhook",
+                "pages": [
+              "projects/ducky_radio/api_Reference/endpoint/get/current_track",
+              "projects/ducky_radio/api_Reference/endpoint/get/current_track_title",
+              "projects/ducky_radio/api_Reference/endpoint/get/current_track_artist",
+              "projects/ducky_radio/api_Reference/endpoint/get/track_history",
+              "projects/ducky_radio/api_Reference/endpoint/get/cider/playback_status",
+              "projects/ducky_radio/api_Reference/endpoint/get/cider/playback_volume"
+                ] 
+              },
+              {
+                "group": "Types",
+                "icon": "brackets-curly",
+                "pages": [
+              "projects/ducky_radio/api_Reference/types/track",
+              "projects/ducky_radio/api_Reference/types/apple_music_nowplaying_response",
+              "projects/ducky_radio/api_Reference/types/apple_music_artwork",
+              "projects/ducky_radio/api_Reference/types/apple_music_play_params",
+              "projects/ducky_radio/api_Reference/types/apple_music_preview"
+
+                ] 
+              }
+            ]
+          },
+          {
+            "group": "🦆 Back Home",
+            "root": "index",
+            
+            "pages": [
+              "index"
+            ]
           }
         ]
       }
@@ -88,5 +197,9 @@
       "discord": "https://ducky.wiki/travel/discord",
       "youtube": "https://ducky.wiki/travel/youtube"
     }
+  },
+  "contextual": {
+    "options": ["copy", "view"],
+    "display": "header"
   }
 }

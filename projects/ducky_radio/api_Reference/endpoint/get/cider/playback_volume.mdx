@@ -1,0 +1,41 @@
+---
+title: "Get Cider Playback Volume"
+description: "Get the volume of Cider's playback"
+api: "GET /api/services/cider/playback/volume"
+---
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        <ResponseField name="data" type="Object" required>
+            <Expandable title="properties of data" defaultOpen>
+                <ResponseField name="volume" type="number" post={["min 0", "max 1"]}>
+                    The current volume of Cider's playback
+                </ResponseField>
+            </Expandable>
+        </ResponseField>
+        <ResponseField name="error" type="null" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: {
+            volume: 0.05
+          },
+          error: null
+        }
+        ```
+    </Tab>
+    <Tab title="Error (or Muted)">
+        <ResponseField name="data" type="null" required />
+        <ResponseField name="error" type="string" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: null,
+          error: "Something went wrong!"
+        }
+        ```
+    </Tab>
+</Tabs>

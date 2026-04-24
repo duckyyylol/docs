@@ -1,0 +1,65 @@
+---
+title: "AppleMusicNowPlayingResponse"
+sidebarTitle: "AppleMusicNowPlayingResponse"
+description: "A raw response from the Cider API"
+---
+#### Properties
+<ResponseField name="albumName" type="string" />
+
+<ResponseField name="artistName" type="string" />
+
+<ResponseField name="artwork" type="AppleMusicArtwork">
+  An [AppleMusicArtwork](/projects/ducky_radio/api_Reference/types/apple_music_artwork) object
+</ResponseField>
+
+<ResponseField name="audioLocale" type="string" />
+
+<ResponseField name="audioTraits" type="string[]" />
+
+<ResponseField name="composerName" type="string" />
+
+<ResponseField name="discNumber" type="integer" />
+
+<ResponseField name="durationInMillis" type="integer" />
+
+<ResponseField name="genreNames" type="string[]" />
+
+<ResponseField name="hasLyrics" type="boolean" />
+
+<ResponseField name="hasTimeSyncedLyrics" type="boolean" />
+
+<ResponseField name="isAppleDigitalMaster" type="boolean" />
+
+<ResponseField name="isMasteredForItunes" type="boolean" />
+
+<ResponseField name="isVocalAttenuationAllowed" type="boolean" />
+
+<ResponseField name="isrc" type="string" />
+
+<ResponseField name="name" type="string" />
+
+<ResponseField name="playParams" type="AppleMusicPlayParams">
+  An [AppleMusicPlayParams](/projects/ducky_radio/api_Reference/types/apple_music_play_params) object
+</ResponseField>
+
+<ResponseField name="previews" type="AppleMusicPreview[]">
+  An array of [AppleMusicPreview](/projects/ducky_radio/api_Reference/types/apple_music_preview) objects
+</ResponseField>
+
+<ResponseField name="releaseDate" type="string" />
+
+<ResponseField name="trackNumber" type="integer" />
+
+<ResponseField name="url" type="string" />
+
+<ResponseField name="currentPlaybackTime" type="number" />
+
+<ResponseField name="remainingTime" type="number" />
+
+<ResponseField name="inFavorites" type="boolean" />
+
+<ResponseField name="inLibrary" type="boolean" />
+
+<ResponseField name="shuffleMode" type="integer" />
+
+<ResponseField name="repeatMode" type="integer" />

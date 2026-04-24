@@ -1,0 +1,49 @@
+---
+title: "Get Current Track"
+description: "Get information about the song that is currently playing."
+api: "GET /api/tracks/nowplaying"
+---
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        <ResponseField name="data" type="Track" required>
+            A [Track](/projects/ducky_radio/api_Reference/types/track) object
+        </ResponseField>
+        <ResponseField name="error" type="null" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: {
+            id: "beyoncfreedomfeatkendricklamarlemonade",
+            hash: "QmV5b25jQzNBOUZyZWVkb20yMGZlYXQyMEtlbmRyaWNrMjBMYW1hckxlbW9uYWRl",
+            lastPlayedTimestamp: 1776990890021,
+            title: "Freedom%20(feat.%20Kendrick%20Lamar)",
+            artist: "Beyonc%C3%A9",
+            album: "Lemonade",
+            imageUrl: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/db/25/a1/db25a1c0-8a4a-3b4d-226d-7c7704dc92da/886447680711.jpg/640x640sr.jpg",
+            trackUrl: "https://music.apple.com/us/album/freedom-feat-kendrick-lamar/1460430561?i=1460430752",
+            genres: [
+                "Pop"
+            ],
+            provider: "cider",
+            has_controls: true
+          },
+          error: null
+        }
+        ```
+    </Tab>
+    <Tab title="Error">
+        <ResponseField name="data" type="null" required />
+        <ResponseField name="error" type="string" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: null,
+          error: "Something went wrong!"
+        }
+        ```
+    </Tab>
+</Tabs>

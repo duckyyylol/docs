@@ -1,0 +1,45 @@
+---
+title: "Get Cider Playback Status"
+description: "Get information about Cider's playback status"
+api: "GET /api/services/cider/playback/status"
+---
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        <ResponseField name="data" type="Object" required>
+            <Expandable title="properties of data" defaultOpen>
+                <ResponseField name="playing" type="boolean">
+                    Whether or not the Cider app is playing a track
+                </ResponseField>
+                <ResponseField name="paused" type="boolean">
+                    Whether or not the Cider app's playback is paused
+                </ResponseField>
+            </Expandable>
+        </ResponseField>
+        <ResponseField name="error" type="null" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: {
+            playing: false,
+            paused: true
+          },
+          error: null
+        }
+        ```
+    </Tab>
+    <Tab title="Error">
+        <ResponseField name="data" type="null" required />
+        <ResponseField name="error" type="string" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: null,
+          error: "Something went wrong!"
+        }
+        ```
+    </Tab>
+</Tabs>
