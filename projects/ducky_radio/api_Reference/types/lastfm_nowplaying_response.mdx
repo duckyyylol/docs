@@ -1,0 +1,40 @@
+---
+title: "LastFMNowPlayingResponse"
+sidebarTitle: "LastFMNowPlayingResponse"
+description: "A raw response from the Last.FM API"
+---
+#### Properties
+<ResponseField name="streamable" type="string" />
+<ResponseField name="mbid" type="string" />
+<ResponseField name="name" type="string" />
+<ResponseField name="url" type="string" />
+<ResponseField name="artist" type="Object">
+  <Expandable title="properties of artist" defaultOpen>
+    <ResponseField name="mbid" type="string" />
+    <ResponseField name="#text" type="string" />
+  </Expandable>
+</ResponseField>
+
+
+<ResponseField name="image" type="Object[]">
+  <Expandable title="children" defaultOpen>
+    <ResponseField name="size" type="small | medium | large | extralarge" />
+    <ResponseField name="#text" type="string" />
+  </Expandable>
+</ResponseField>
+
+
+<ResponseField name="album" type="Object">
+  <Expandable title="properties of album" defaultOpen>
+    <ResponseField name="mbid" type="string" />
+    <ResponseField name="#text" type="string" />
+  </Expandable>
+</ResponseField>
+
+
+<ResponseField name="date" type="Object">
+  <Expandable title="properties of date" defaultOpen>
+    <ResponseField name="uts" type="string" />
+    <ResponseField name="#text" type="string" />
+  </Expandable>
+</ResponseField>

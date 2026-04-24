@@ -18,6 +18,9 @@
     "mdx": {
       "server": "http://localhost:1234/"
     },
+    "examples": {
+      "languages": ["curl", "typescript", "nodejs", "python", "go", "kotlin", "java"]
+    },
     "playground": {
       "display": "simple"
     }
@@ -156,7 +159,15 @@
               "projects/ducky_radio/api_Reference/endpoint/get/current_track_artist",
               "projects/ducky_radio/api_Reference/endpoint/get/track_history",
               "projects/ducky_radio/api_Reference/endpoint/get/cider/playback_status",
-              "projects/ducky_radio/api_Reference/endpoint/get/cider/playback_volume"
+              "projects/ducky_radio/api_Reference/endpoint/get/cider/playback_volume",
+              "projects/ducky_radio/api_Reference/endpoint/post/cider/playback_volume",
+              "projects/ducky_radio/api_Reference/endpoint/post/cider/play_song_by_id",
+              "projects/ducky_radio/api_Reference/endpoint/post/cider/play",
+              "projects/ducky_radio/api_Reference/endpoint/post/cider/pause",
+              "projects/ducky_radio/api_Reference/endpoint/post/cider/skip",
+              "projects/ducky_radio/api_Reference/endpoint/post/cider/previous",
+              "projects/ducky_radio/api_Reference/endpoint/get/icecast/playback_status",
+              "projects/ducky_radio/api_Reference/endpoint/get/lastfm/playback_status"
                 ] 
               },
               {
@@ -167,7 +178,11 @@
               "projects/ducky_radio/api_Reference/types/apple_music_nowplaying_response",
               "projects/ducky_radio/api_Reference/types/apple_music_artwork",
               "projects/ducky_radio/api_Reference/types/apple_music_play_params",
-              "projects/ducky_radio/api_Reference/types/apple_music_preview"
+              "projects/ducky_radio/api_Reference/types/apple_music_preview",
+              "projects/ducky_radio/api_Reference/types/icecast_server_status",
+              "projects/ducky_radio/api_Reference/types/icecast_server_statistics",
+              "projects/ducky_radio/api_Reference/types/icecast_server_source",
+              "projects/ducky_radio/api_Reference/types/lastfm_nowplaying_response"
 
                 ] 
               }

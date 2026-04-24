@@ -1,0 +1,60 @@
+---
+title: "Play Cider Song by ID"
+description: "Play a song on Cider via its Apple Music ID"
+api: "POST /api/services/cider/playback/play/{songId}"
+playground: "simple"
+# parameters:
+#   - name: songId
+#     in: path
+#     required: true
+#     description: "The Apple Music ID of the track"
+#     schema:
+#       type: string
+
+---
+
+### Request Headers
+<ParamField header="quack" type="string" required>
+    This header must be set to "quack", otherwise requests will fail
+</ParamField>
+### Path Parameters
+<ParamField path="songId" type="string" required>
+    The new volume, from 0 to 1
+</ParamField>
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        <ResponseField name="data" type="Object" required>
+            <Expandable title="properties of data" defaultOpen>
+                <ResponseField name="added" type="boolean" />
+                <ResponseField name="song" type="Object">
+                    <Expandable title="properties of song" defaultOpen>
+                        <ResponseField name="data" type="Object">
+                            <Expandable title="properties of song.data" defaultOpen>
+                                <ResponseField name="id" type="string" />
+                                <ResponseField name="type" type="string" />
+                                <ResponseField name="href" type="string" />
+                                <ResponseField name="attributes" type="Partial<AppleMusicNowPlayingResponse>" />
+                                <ResponseField name="relationships" type="Object" />
+                            </Expandable>
+                        </ResponseField>
+                    </Expandable>
+                </ResponseField>
+            </Expandable>
+        </ResponseField>
+        <ResponseField name="error" type="null" required />
+    </Tab>
+    <Tab title="Error">
+        <ResponseField name="data" type="null" required />
+        <ResponseField name="error" type="string" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: null,
+          error: "Something went wrong!"
+        }
+        ```
+    </Tab>
+</Tabs>

@@ -1,0 +1,56 @@
+---
+title: "Set Cider Playback Volume"
+description: "Set the volume of Cider's playback"
+api: "POST /api/services/cider/playback/volume"
+playground: "simple"
+
+---
+
+### Request Headers
+<ParamField header="quack" type="string" required>
+    This header must be set to "quack", otherwise requests will fail
+</ParamField>
+### Request Body
+<ParamField body="volume" type="number" post={['min 0', 'max 1']} required>
+    The new volume, from 0 to 1
+</ParamField>
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        <ResponseField name="data" type="Object" required>
+            <Expandable title="properties of data" defaultOpen>
+                <ResponseField name="volume" type="number" post={["min 0", "max 1"]}>
+                    The new volume of Cider's playback
+                </ResponseField>
+                <ResponseField name="old_volume" type="number" post={["min 0", "max 1"]}>
+                    The old volume of Cider's playback
+                </ResponseField>
+            </Expandable>
+        </ResponseField>
+        <ResponseField name="error" type="null" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: {
+            volume: 0.05,
+            old_volume: 0.2
+          },
+          error: null
+        }
+        ```
+    </Tab>
+    <Tab title="Error">
+        <ResponseField name="data" type="null" required />
+        <ResponseField name="error" type="string" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: null,
+          error: "Something went wrong!"
+        }
+        ```
+    </Tab>
+</Tabs>

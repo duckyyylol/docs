@@ -1,0 +1,40 @@
+---
+title: "Trigger Cider Pause"
+description: "Trigger the pause button action in Cider"
+api: "POST /api/services/cider/playback/pause"
+playground: "simple"
+
+---
+
+### Request Headers
+<ParamField header="quack" type="string" required>
+    This header must be set to "quack", otherwise requests will fail
+</ParamField>
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        <ResponseField name="data" type="boolean" required />
+        <ResponseField name="error" type="null" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: true,
+          error: null
+        }
+        ```
+    </Tab>
+    <Tab title="Error">
+        <ResponseField name="data" type="null" required />
+        <ResponseField name="error" type="string" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: null,
+          error: "Something went wrong!"
+        }
+        ```
+    </Tab>
+</Tabs>

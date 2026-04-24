@@ -1,0 +1,60 @@
+---
+title: "Get Icecast Status"
+description: "Get information about the Icecast connection"
+api: "GET /api/services/icecast/playback/nowplaying"
+---
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        <ResponseField name="data" type="IcecastServerStatus" required>
+            An [IcecastServerStatus](../../../types/icecast_server_status) object
+        </ResponseField>
+        <ResponseField name="error" type="null" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: {
+            icestats: {
+            admin: "admin message",
+            host: "radio.example.com",
+            location: "Stream Location",
+            server_id: "Icecast 2.4.4",
+            server_start: "Thu, 22 Jan 2026 04:37:21 +0000",
+            server_start_iso8601: "2026-01-22T04:37:21+0000",
+            source: {
+                audio_info: "bitrate=128",
+                bitrate: 128,
+                genre: "Live Mix",
+                listener_peak: 0,
+                listeners: 0,
+                listenurl: "http://radio.example.com:8000/whatever.ogg",
+                server_description: "This stream is online for testing purposes!",
+                server_name: "Mixxx",
+                server_type: "audio/mpeg",
+                server_url: "https://www.mixxx.org",
+                stream_start: "Fri, 24 Apr 2026 02:08:46 +0000",
+                stream_start_iso8601: "2026-04-24T02:08:46+0000",
+                title: "Shrouding Dark Cloud _ETr_ Yoko Shimomura",
+                dummy: null
+            }
+        }
+          },
+          error: null
+        }
+        ```
+    </Tab>
+    <Tab title="Error">
+        <ResponseField name="data" type="null" required />
+        <ResponseField name="error" type="string" required />
+
+        ### Example Response
+        ```typescript
+        {
+          data: null,
+          error: "Something went wrong!"
+        }
+        ```
+    </Tab>
+</Tabs>
