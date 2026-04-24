@@ -1,0 +1,104 @@
+---
+title: "Self-Host Spoofify"
+sidebarTitle: "Spoofify Installation"
+icon: "download"
+---
+
+<Warning>
+    This is the guide for self-hosting Spoofify. For the Ducky-hosted starter guide, see [this page](../ducky_hosted/starter_guide).
+</Warning>
+
+## Getting Started
+<Steps>
+    <Step title="Prepare your Workspace">
+    <Expandable title="Steps">
+        <Steps>
+            <Step title="Clone the Repository">
+            Navigate to the desired location, and clone the GitHub repository to the current directory
+            ```bash
+            git clone https://github.com/duckyyylol/Spoofify . 
+            ```  
+            </Step>
+
+            <Step title="Install NPM Modules">
+            ```bash
+            npm install 
+            ```  
+            </Step>
+
+            <Step title="Create a Tunnel">
+            A tunnel is required for local development, as Spotify requires redirect URIs to have the HTTPS protocol.
+            
+            1. Install [Cloudflared](https://github.com/cloudflare/cloudflared)
+            2. Run a tunnel pointing to the Vite development port, `5173`
+
+            ```bash
+            cloudflared tunnel --url http://localhost:5173
+            ```
+
+            A url using HTTPS will be provided in the terminal after starting the tunnel. **&lt;random_words&gt;.trycloudflared.com**
+
+            <Note>
+                Cloudflared will throw errors until the app is running. Environment variables must be configured before starting the app.
+            </Note>
+            </Step>
+        </Steps>
+    </Expandable>
+    </Step>
+
+    <Step title="Update Environment Variables">
+    <Expandable title="Steps">
+        <Steps>
+            <Step title="Create .env">
+            Copy the `.env.example` file to `.env`
+            ```bash
+            cp .env.example .env
+            ```  
+            </Step>
+
+            <Step title="Update .env">
+                Update the following values within `.env`
+
+                <ResponseField name="PUBLIC_MOBILE_SIZE" type="number" default={700} required>
+                    The width, in pixels, at which to assume mobile viewing for reactivity
+                </ResponseField>
+
+                <ResponseField name="PUBLIC_TABLET_SIZE" type="number" default={1000} required>
+                    The width, in pixels, at which to assume tablet viewing for reactivity
+                </ResponseField>
+
+                <ResponseField name="PRIVATE_DATABASE_URL" type="string" default="local.db" required>
+                    The path of the Sqlite database
+                </ResponseField>
+
+                <ResponseField name="PUBLIC_REDIRECT_URI" type="string" required>
+                    Your Spotify Redirect URI
+                    
+                    Must exactly match what is entered in the Spotify developer dashboard.
+                </ResponseField>
+                <ResponseField name="PRIVATE_CLIENT_ID" type="string" required>
+                    Your Spotify Client ID
+                </ResponseField>
+                <ResponseField name="PRIVATE_CLIENT_SECRET" type="string" required>
+                    Your Spotify Client Secret
+                </ResponseField>
+                <ResponseField name="PRIVATE_API_KEY" type="string" required>
+                    Must match the `SPOOFIFY_API_KEY` set in the [Twitch Bot](installation_twitch)
+                </ResponseField>
+            </Step>
+        </Steps>
+    </Expandable>
+    </Step>
+
+    <Step title="Run the Local Project">
+        ```bash
+        npm run dev
+        ```
+    </Step>
+
+    <Step title="Build for Production">
+        ```bash
+        npm run build
+        ```
+    </Step>
+</Steps>

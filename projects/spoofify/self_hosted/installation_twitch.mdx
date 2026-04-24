@@ -1,0 +1,67 @@
+---
+title: "Self-Host Spoofify Twitch Bot"
+sidebarTitle: "Twitch Bot Installation"
+icon: "twitch"
+---
+
+<Warning>
+    This is the guide for self-hosting Spoofify. For the Ducky-hosted starter guide, see [this page](../ducky_hosted/starter_guide).
+</Warning>
+
+## Getting Started
+<Steps>
+    <Step title="Prepare your Workspace">
+    <Expandable title="Steps" defaultOpen>
+        <Steps>
+            <Step title="Clone the Repository">
+            Navigate to the desired location, and clone the GitHub repository to the current directory
+            ```bash
+            git clone https://github.com/duckyyylol/Spoofify . 
+            ```  
+            </Step>
+
+            <Step title="Install NPM Modules">
+            ```bash
+            npm install 
+            ```  
+            </Step>
+
+            <Step title="Create a Tunnel">
+            A tunnel is required for local development, as Spotify requires redirect URIs to have the HTTPS protocol.
+            
+            1. Install [Cloudflared](https://github.com/cloudflare/cloudflared)
+            2. Run a tunnel pointing to the Vite development port, `5173`
+
+            ```bash
+            cloudflared tunnel --url http://localhost:5173
+            ```
+
+            A url using HTTPS will be provided in the terminal after starting the tunnel. **&lt;random_words&gt;.trycloudflared.com**
+
+            <Note>
+                Cloudflared will throw errors until the app is running. Environment variables must be configured before starting the app.
+            </Note>
+            </Step>
+        </Steps>
+    </Expandable>
+    </Step>
+
+    <Step title="Update Environment Variables">
+    <Expandable title="Steps" defaultOpen>
+        <Steps>
+            <Step title="Create .env">
+            Copy the `.env.example` file to `.env`
+            ```bash
+            cp .env.example .env
+            ```  
+            </Step>
+
+            <Step title="">
+            ```bash
+            npm install 
+            ```  
+            </Step>
+        </Steps>
+    </Expandable>
+    </Step>
+</Steps>
