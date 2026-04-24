@@ -2,10 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "linden",
   "name": "Ducky Docs",
-  "banner": {
-    "content": "🦆 Create: Jukebox Display is currently under review on Modrinth. A temporary download is available [here](https://files.ducky.wiki/share/mods/CreateJukeboxDisplays/neoforge/1.21.1/1.0/createnowplaying.jar)",
-    "dismissible": true
-  },
   "colors": {
     "primary": "#663a09",
     "light": "#A67E26",
