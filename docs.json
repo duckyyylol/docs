@@ -124,9 +124,13 @@
         "root": "projects/ducky_radio",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "Getting Started",
             "root": "projects/ducky_radio/introduction",
-            "icon": "hand-wave"
+            "icon": "hand-wave",
+            "pages": [
+              "projects/ducky_radio/introduction",
+              "projects/ducky_radio/installation"
+            ]
           },
           {
             "group": "Browser Overlays",
@@ -174,7 +178,7 @@
                 "group": "Types",
                 "icon": "brackets-curly",
                 "pages": [
-              "projects/ducky_radio/Api_Reference/types/track",
+              "projects/ducky_radio/Api_Reference/types/Track",
               "projects/ducky_radio/Api_Reference/types/AppleMusicNowPlayingResponse",
               "projects/ducky_radio/Api_Reference/types/AppleMusicArtwork",
               "projects/ducky_radio/Api_Reference/types/AppleMusicPlayParams",

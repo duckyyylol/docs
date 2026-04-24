@@ -1,0 +1,68 @@
+---
+title: "Introduction"
+description: "Get to know the concepts and systems that power Ducky Radio"
+---
+<Warning>
+    Ducky Radio is self-hosted software and intended for advanced users. Technical support will not be provided beyond major bug fixes.
+</Warning>
+
+
+### Glossary
+<AccordionGroup>
+    <Accordion title="Provider">
+        Provider refers to one of three compatible platforms that work with Ducky Radio.
+        
+        The three available providers are `Cider`, `Last.FM`, and `Icecast`
+    </Accordion>
+    <Accordion title="Browser Overlay">
+        This refers to a webpage that can be displayed as a **Browser Source** within broadcasting software (i.e. OBS Studio)
+
+        Usually used to display "widgets" on a user's stream.
+    </Accordion>
+    <Accordion title="Event">
+        Ducky Radio exposes a Websocket server that can be used to listen for track change events.
+    </Accordion>
+    <Accordion title="Cider">
+        [<Icon icon="https://cider.sh/CC24-transparent.svg" /> Cider](https://cider.sh) is a third-party Apple Music client for Windows, macOS, and Linux.
+
+        Cider is the backbone of the Apple Music portion of Ducky Radio, because it exposes a local HTTP server.
+
+        Cider is owned and operated by [<Icon icon="github" /> Cider Collective](https://github.com/ciderapp/)
+    </Accordion>
+    <Accordion title="Icecast">
+        [<Icon icon="/images/icecast.png" /> Icecast](https://icecast.org) is a streaming media (audio/video) server which currently supports Ogg (Vorbis and Theora), Opus, WebM and MP3 streams.
+        
+
+        Icecast is owned and operated by [<Icon icon="github" /> the xiph open source community](https://github.com/xiph/)
+    </Accordion>
+</AccordionGroup>
+
+<Card title="Ready to Get Going?" icon="download" cta="View Installation Guide" href="installation">
+    Install and run Ducky Radio to get Now Playing everywhere!
+</Card>
+
+### Screenshots
+{/* <Columns cols={2}> */}
+    <Frame caption="Cover Art Overlay (Circlular)">
+        <img src="/images/duckyradio_screenshots/coverart.png" />
+    </Frame>
+    <Frame caption="Now Playing Vinyl Overlay">
+        <img src="/images/duckyradio_screenshots/vinyl.png" />
+    </Frame>
+    
+{/* </Columns> */}
+{/* <Columns cols={2}> */}
+{/* <Column> */}
+    <Frame caption="Last 5 Tracks Overlay">
+        <img src="/images/duckyradio_screenshots/history.png" />
+    </Frame>
+{/* </Column> */}
+    {/* <Column> */}
+    <Frame caption="Cover Art Grid Overlay">
+        <img src="/images/duckyradio_screenshots/covergrid.png" />
+    </Frame>
+    <Frame caption="Now Playing Card Overlay">
+        <img src="/images/duckyradio_screenshots/nowplaying.png" />
+    </Frame>
+    {/* </Column> */}
+{/* </Columns> */}
