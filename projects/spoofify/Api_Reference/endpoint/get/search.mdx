@@ -4,6 +4,11 @@ description: "Search Spotify for a specific query."
 api: "GET https://{spoofify_url}/api/spotify/search/{query}"
 ---
 
+### Request Headers
+<ParamField header="api-key" type="string" required>
+    Must match the API key set in the Spoofify environment variables
+</ParamField>
+
 ### Path Parameters
 <ParamField path="query" type="string" required>
     URL-encoded search query.
