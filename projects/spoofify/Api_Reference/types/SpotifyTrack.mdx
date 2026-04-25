@@ -1,0 +1,74 @@
+---
+title: "SpotifyTrack"
+sidebarTitle: "SpotifyTrack"
+description: "Represents a track on Spotify"
+---
+#### Properties
+<ResponseField name="album" type="Object">
+  <Expandable title="properties of album">
+      <ResponseField name="album_type" type="string" />
+        <ResponseField name="total_tracks" type="integer" />
+        <ResponseField name="available_markets" type="string[]" />
+        <ResponseField name="external_urls" type="Object">
+        <Expandable title="properties of external_urls">
+            <ResponseField name="spotify" type="string" />
+        </Expandable>
+        </ResponseField>
+        <ResponseField name="href" type="string" />
+        <ResponseField name="id" type="string" />
+        <ResponseField name="images" type="Object[]">
+            <Expandable title="properties of images">
+                <ResponseField name="url" type="string" />
+                <ResponseField name="height" type="integer" />
+                <ResponseField name="width" type="integer" />
+            </Expandable>
+        </ResponseField>
+        <ResponseField name="name" type="string" />
+        <ResponseField name="release_date" type="string" />
+        <ResponseField name="release_date_precision" type="string" />
+        <ResponseField name="restrictions" type="Object">
+            <Expandable title="properties of restrictions">
+                <ResponseField name="reason" type="string" />
+            </Expandable>
+        </ResponseField>
+        <ResponseField name="type" type="string" />
+        <ResponseField name="uri" type="string" />
+        <ResponseField name="artists" type="SpotifyArtist[]">
+        An array of [SpotifyArtist](SpotifyArtist) objects.
+        </ResponseField> 
+  </Expandable>
+</ResponseField>
+<ResponseField name="artists" type="SpotifyArtist[]">
+    An array of [SpotifyArtist](SpotifyArtist) objects.
+</ResponseField> 
+<ResponseField name="available_markets" type="string[]" />
+<ResponseField name="disc_number" type="integer" />
+<ResponseField name="duration_ms" type="integer" />
+<ResponseField name="explicit" type="boolean" />
+<ResponseField name="external_ids" type="Object">
+    <Expandable title="properties of external_ids">
+        <ResponseField name="isrc" type="string" />
+        <ResponseField name="ean" type="string" />
+        <ResponseField name="upc" type="string" />
+    </Expandable>
+</ResponseField>
+<ResponseField name="external_urls" type="Object">
+    <Expandable title="properties of external_urls">
+        <ResponseField name="spotify" type="string" />
+    </Expandable>
+</ResponseField>
+<ResponseField name="href" type="string" />
+<ResponseField name="id" type="string" />
+<ResponseField name="is_playable" type="boolean" />
+<ResponseField name="restrictions" type="Object">
+    <Expandable title="properties of restrictions">
+        <ResponseField name="reason" type="string" />
+    </Expandable>
+</ResponseField>
+<ResponseField name="name" type="string" />
+<ResponseField name="popularity" type="integer" />
+<ResponseField name="preview_url" type="string" />
+<ResponseField name="track_number" type="integer" />
+<ResponseField name="type" type="string" />
+<ResponseField name="uri" type="string" />
+<ResponseField name="is_local" type="boolean" />

@@ -1,0 +1,49 @@
+---
+title: "SpotifyUser"
+sidebarTitle: "SpotifyUser"
+description: "Represents a user on Spotify"
+---
+#### Properties
+<ResponseField name="country" type="string" />
+
+<ResponseField name="display_name" type="string" />
+
+<ResponseField name="email" type="string" />
+
+<ResponseField name="explicit_content" type="Object">
+  <Expandable title="properties of explicit_content">
+    <ResponseField name="filter_enabled" type="boolean" />
+    <ResponseField name="filter_locked" type="boolean" />
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="external_urls" type="Object">
+  <Expandable title="properties of external_urls">
+    <ResponseField name="spotify" type="string" />
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="followers" type="Object">
+  <Expandable title="properties of followers">
+    <ResponseField name="href" type="string" />
+    <ResponseField name="total" type="integer" />
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="href" type="string" />
+
+<ResponseField name="id" type="string" />
+
+<ResponseField name="images" type="Object[]">
+  <Expandable title="properties of images">
+    <ResponseField name="url" type="string" />
+    <ResponseField name="height" type="integer" />
+    <ResponseField name="width" type="integer" />
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="product" type="string" />
+
+<ResponseField name="type" type="string" />
+
+<ResponseField name="uri" type="string" />

@@ -1,0 +1,39 @@
+---
+title: "Add Track to Queue"
+description: "Add a song to the Spotify queue"
+api: "POST /api/spotify/queue/add-track/{track_uri}"
+playground: "simple"
+
+---
+
+### Request Headers
+<ParamField header="api-key" type="string" required>
+    Must match the API key set in the Spoofify environment variables
+</ParamField>
+
+### Path Parameters
+<ParamField path="track_uri" type="string" required>
+    The URI of the track on Spotify you want to play.
+
+    The URI can be obtained via [Search for Track](../get/search)
+</ParamField>
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+        `true`
+
+        ### Example Response
+        ```typescript
+        true
+        ```
+    </Tab>
+    <Tab title="Error">
+        `false`
+
+        ### Example Response
+        ```typescript
+        false
+        ```
+    </Tab>
+</Tabs>

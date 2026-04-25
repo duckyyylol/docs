@@ -1,0 +1,34 @@
+---
+title: "Get Current Track"
+description: "Get information about the song that is currently playing."
+api: "GET https://{spoofify_url}/api/now-playing"
+---
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+
+        A [BasicTrack](/projects/spoofify/Api_Reference/types/BasicTrack) object
+
+        ### Example Response
+        ```typescript
+        {
+          id: "5jkFvD4UJrmdoezzT1FRoP",
+          album: "Nightflight to Venus",
+          artist: "Boney M.",
+          href: "https://api.spotify.com/v1/tracks/5jkFvD4UJrmdoezzT1FRoP",
+          imageUrl: "https://i.scdn.co/image/ab67616d0000b2739e77d65619f80436b5cc9d12",
+          title: "Rasputin",
+          uri: "spotify:track:5jkFvD4UJrmdoezzT1FRoP"
+        }
+        ```
+    </Tab>
+    <Tab title="Error">
+        `Null`
+
+        ### Example Response
+        ```typescript
+        null
+        ```
+    </Tab>
+</Tabs>

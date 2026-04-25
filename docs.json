@@ -229,6 +229,37 @@
             ]
           },
           {
+            "group": "API Reference",
+            "root": "projects/spoofify/Api_Reference",
+            "icon": "globe",
+            "directory": "card",
+            "pages": [
+              "projects/spoofify/Api_Reference/introduction",
+              {
+                "group": "Endpoints",
+                "icon": "webhook",
+                "pages": [
+                "projects/spoofify/Api_Reference/endpoint/get/current_track",
+                "projects/spoofify/Api_Reference/endpoint/get/queue",
+                "projects/spoofify/Api_Reference/endpoint/get/search",
+                "projects/spoofify/Api_Reference/endpoint/post/queue_track"
+                ] 
+              },
+              {
+                "group": "Types",
+                "icon": "brackets-curly",
+                "pages": [
+              "projects/spoofify/Api_Reference/types/BasicTrack",
+              "projects/spoofify/Api_Reference/types/SpotifyPlaybackState",
+              "projects/spoofify/Api_Reference/types/SpotifyTrack",
+              "projects/spoofify/Api_Reference/types/SpotifyArtist",
+              "projects/spoofify/Api_Reference/types/SpotifyUser"
+
+                ] 
+              }
+            ]
+          },
+          {
             "group": "🦆 Back Home",
             "root": "index",
             

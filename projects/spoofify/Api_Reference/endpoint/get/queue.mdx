@@ -1,0 +1,46 @@
+---
+title: "Get Queue"
+description: "Get information about each song in the Spotify queue."
+api: "GET https://{spoofify_url}/api/queue"
+---
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+
+        An array of [BasicTrack](/projects/spoofify/Api_Reference/types/BasicTrack) objects
+
+        ### Example Response
+        ```typescript
+        [
+            {
+            id: "5jkFvD4UJrmdoezzT1FRoP",
+            album: "Nightflight to Venus",
+            artist: "Boney M.",
+            href: "https://api.spotify.com/v1/tracks/5jkFvD4UJrmdoezzT1FRoP",
+            imageUrl: "https://i.scdn.co/image/ab67616d0000b2739e77d65619f80436b5cc9d12",
+            title: "Rasputin",
+            uri: "spotify:track:5jkFvD4UJrmdoezzT1FRoP"
+            },
+            {
+              id: "1mCsF9Tw4AkIZOjvZbZZdT",
+              album: "I Don't Speak The Language",
+              artist: "Matthew Wilder",
+              href: "https://api.spotify.com/v1/tracks/1mCsF9Tw4AkIZOjvZbZZdT",
+              imageUrl: "https://i.scdn.co/image/ab67616d0000b2739824c6e084b02d24b2e22e94",
+              title: "Break My Stride",
+              uri: "spotify:track:1mCsF9Tw4AkIZOjvZbZZdT"
+            },
+            ...
+        ]
+        ```
+    </Tab>
+    <Tab title="Error">
+        An empty array
+
+        ### Example Response
+        ```typescript
+        []
+        ```
+    </Tab>
+</Tabs>

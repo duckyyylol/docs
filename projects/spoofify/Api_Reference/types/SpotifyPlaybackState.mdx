@@ -1,0 +1,82 @@
+---
+title: "SpotifyPlaybackState"
+sidebarTitle: "SpotifyPlaybackState"
+description: "A raw response from the Spotify API"
+---
+#### Properties
+<ResponseField name="device" type="Object">
+  <Expandable title="properties of device">
+  <ResponseField name="id" type="string" />
+
+  <ResponseField name="is_active" type="boolean" />
+
+  <ResponseField name="is_private_session" type="boolean" />
+
+  <ResponseField name="is_restricted" type="boolean" />
+
+  <ResponseField name="name" type="string" />
+
+  <ResponseField name="type" type="string" />
+
+  <ResponseField name="volume_percent" type="integer" />
+
+  <ResponseField name="supports_volume" type="boolean" />
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="repeat_state" type="string" />
+
+<ResponseField name="shuffle_state" type="boolean" />
+
+<ResponseField name="context" type="Object">
+  <Expandable title="properties of context">
+    <ResponseField name="type" type="string" />
+
+    <ResponseField name="href" type="string" />
+
+    <ResponseField name="external_urls" type="Object">
+  <Expandable title="properties of external_urls">
+      <ResponseField name="spotify" type="string" />
+  </Expandable>
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="timestamp" type="integer" />
+
+<ResponseField name="progress_ms" type="integer" />
+
+<ResponseField name="is_playing" type="boolean" />
+
+<ResponseField name="item" type="SpotifyTrack">
+  A [SpotifyTrack](SpotifyTrack) object.
+</ResponseField>
+
+<ResponseField name="currently_playing_type" type="string" />
+
+<ResponseField name="actions" type="Object">
+    <Expandable title="properties of actions">
+      <ResponseField name="interrupting_playback" type="boolean" />
+
+<ResponseField name="pausing" type="boolean" />
+
+<ResponseField name="resuming" type="boolean" />
+
+<ResponseField name="seeking" type="boolean" />
+
+<ResponseField name="skipping_next" type="boolean" />
+
+<ResponseField name="skipping_prev" type="boolean" />
+
+<ResponseField name="toggling_repeat_context" type="boolean" />
+
+<ResponseField name="toggling_shuffle" type="boolean" />
+
+<ResponseField name="toggling_repeat_track" type="boolean" />
+
+<ResponseField name="transferring_playback" type="boolean" />
+    </Expandable>
+</ResponseField>
+
+<ResponseField name="uri" type="string" />
+

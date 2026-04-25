@@ -1,0 +1,31 @@
+---
+title: "Search for Track"
+description: "Search Spotify for a specific query."
+api: "GET https://{spoofify_url}/api/spotify/search/{query}"
+---
+
+### JSON Response
+<Tabs>
+    <Tab title="Success">
+
+        A Spotify search result object
+
+        #### Example Response
+
+        https://developer.spotify.com/documentation/web-api/reference/search
+    </Tab>
+    <Tab title="Error">
+        A Spotify error response
+
+        ### Example Response
+        ```typescript
+        {
+          error: {
+              status: 400,
+              message: "string"
+          }
+        }
+        ```
+        https://developer.spotify.com/documentation/web-api/reference/search
+    </Tab>
+</Tabs>

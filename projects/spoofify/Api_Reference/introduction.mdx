@@ -1,0 +1,40 @@
+---
+title: "API Introduction"
+sidebarTitle: "Introduction"
+icon: "hand-wave"
+description: "Interact with Spoofify via HTTP"
+---
+## Authentication
+Some endpoints require a **Spotify access token** in the form of a request Cookie.
+
+Some endpoints require a **Spoofify API key**, which lives as an environment variable in the Spoofify project.
+
+## Sending your First Request
+##### Once Spoofify is running, you can test the API's functionality with a simple GET request.
+<Steps>
+    <Step title="Play Music">
+        Play a song on Spotify. Wait for the app to recognize the playback before continuing.
+    </Step>
+    <Step title="Send GET Request">
+        Navigate to the URL below in your browser:
+        ```
+        https://{spoofify_url}/api/now-playing
+        ```
+
+        <Info>
+            Opening the link in the browser supplies the cookie required for the endpoint.
+        </Info>
+    </Step>
+    <Step title="😎 Observe">
+        You should receive a JSON response. It will either be a [BasicTrack](types/BasicTrack) object, or `null`.
+        
+        [See Endpoint Documentation](endpoint/get/current_track)
+    </Step>
+</Steps>
+
+<hr />
+
+## Next Steps
+Once you've got the API up and running, continue to the [Endpoints](endpoint) section to learn about all of the ways to interact with Spoofify over HTTP
+
+<Card title="API Endpoints" icon="webhook" href="endpoint" cta="Explore API Endpoints"/>
