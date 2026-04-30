@@ -1,0 +1,64 @@
+---
+title: "Custom Spoofify Themes"
+sidebarTitle: "Custom Themes"
+description: "Import custom or premade themes to customize Spoofify's Now Playing card!"
+icon: "palette"
+---
+<Note>
+    The Spoofify dashboard can be found at \{spoofify_url\}/dashboard
+</Note>
+
+## Export Themes
+<Expandable title="Steps to Export Themes">
+    <Steps>
+        <Step title="Navigate to the Spoofify Dashboard" />
+        <Step title="Export your Settings">
+            In the button area at the top of the dashboard, click `Backup Settings` to save your current theme settings as a [JSON file](#json-schema).
+        </Step>
+        <Step title="Keep your Export Safe">
+            Store the file in a place where you won't lose it!
+
+            If your settings are changed, this export is the only way to fully recover your previous theme.
+        </Step>
+    </Steps>
+</Expandable>
+
+## Import Themes
+<Expandable title="Steps to Export Themes" defaultOpen>
+    <Steps>
+        <Step title="Navigate to the Spoofify Dashboard" />
+        <Step title="Select the file to Import">
+            In the button area at the top of the dashboard, click `Select Import File` to choose the `.json` theme file you wish to import.
+        </Step>
+        <Step title="Import Settings">
+            <Warning>
+                Always [export your current theme](#export-themes) to save your settings before importing.
+            </Warning>
+
+            <Expandable title="steps, I have exported my current settings or do not mind if I lose them.">
+                <br />
+                If you've successfully chosen a `.json` file to import, a new button will appear.
+                <br />
+                <br />
+                Choose `Import Settings` to override your current settings with the ones found in the imported file.`   
+            </Expandable>
+        </Step>
+    </Steps>
+</Expandable>
+
+## JSON Schema
+```typescript
+{
+  "id": string,
+  "background_mode": "solid" | "gradient",
+  "animation_style": "slide" | "turn" | "flip",
+  "stroke_width": number,
+  "border_radius": number,
+  "color_1": string,
+  "color_2": string,
+  "shadow_color": string,
+  "text_color": string,
+  "stroke_color": string,
+  "show_album": boolean
+}
+```

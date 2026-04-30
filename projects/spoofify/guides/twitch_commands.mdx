@@ -1,0 +1,130 @@
+---
+title: "Spoofify Twitch Commands"
+sidebarTitle: "Twitch Commands"
+description: "Commands available via the Spoofify Twitch Chatbot"
+icon: "twitch"
+---
+
+### Glossary
+<AccordionGroup>
+    <Accordion title="Alias/Aliases">
+        An alternative name for a command that provides the same functionality.
+        
+        Example: **!sr** is an alias for **!songrequest**
+    </Accordion>
+    <Accordion title="Arguments">
+        Text you supply after the main command to influence what the command does.
+
+        Example: **!songrequest <u>&lt;query&gt;</u>**, where <u>&lt;query&gt;</u> is your search query for the song request
+    </Accordion>
+    <Accordion title="Placeholder">
+        Denoted by text &lt;surrounded in angle brackets&gt;
+
+        Placeholders are meant to be **fully replaced** with the intended argument.
+
+        Example: **!songrequest <u>&lt;query&gt;</u>**, where <u>&lt;query&gt;</u> is **fully replaced** with your search query. i.e. `!songrequest Never Gonna Give you Up`
+    </Accordion>
+</AccordionGroup>
+
+## Command List
+<Tabs>
+    <Tab title="Default">
+        <AccordionGroup>
+            <Accordion title="!songrequest">
+                Adds a song to the queue based on a search query. 
+
+                #### Command Usage
+
+                !songrequest &lt;query&gt;
+
+                **Example Usage:** !songrequest Never Gonna Give you Up
+
+                #### Aliases
+
+                - !sr
+                - !addsong
+                - !play
+                - !request
+            </Accordion>
+
+            <Accordion title="!nowplaying">
+                Displays the current playing track. 
+
+                #### Command Usage
+
+                !nowplaying
+
+                #### Aliases
+
+                - !np
+                - !song
+                - !currentsong
+                - !whatsplaying
+            </Accordion>
+
+            <Accordion title="!queue">
+                Displays the size of the track queue. 
+
+                #### Command Usage
+
+                !queue
+
+                #### Aliases
+
+                - !q
+                - !songlist
+                - !tracklist
+            </Accordion>
+        </AccordionGroup>
+
+    </Tab>
+
+    <Tab title="Broadcaster & Moderator">
+        <AccordionGroup>
+            <Accordion title="!togglesr">
+                Toggles the `!songrequest` command **on**/**off**.
+
+                #### Command Usage
+
+                !togglesr
+
+                #### Aliases
+
+                - !togglecommand
+            </Accordion>
+
+            <Accordion title="!addreward">
+                Add any channel point redemption as a song request redeem.
+
+                #### Command Usage
+
+                1. Run `!addreward`
+                2. Follow the instructions in Twitch chat
+            </Accordion>
+
+            <Accordion title="!removereward">
+                Remove any channel point redemption as a song request redeem.
+
+                #### Command Usage
+
+                1. Run `!removereward`
+                2. Follow the instructions in Twitch chat
+
+                #### Aliases
+
+                - !delreward
+                - !remreward
+            </Accordion>
+
+            <Accordion title="!setup">
+                Initiate the first-time setup for the Spoofify bot.
+
+                #### Command Usage
+
+                1. Run `!setup`
+                2. Follow the instructions in Twitch chat
+            </Accordion>
+        </AccordionGroup>
+
+    </Tab>
+</Tabs>

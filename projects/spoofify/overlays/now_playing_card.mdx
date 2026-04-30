@@ -123,3 +123,100 @@ https://{spoofify_url}/dashboard
 
     The color of the shadow behind the album art.
 </ResponseField>
+
+### Customization Examples
+
+<Expandable title="Ducky Theme">
+    <Frame caption={`Theme: "Ducky" | [Raw JSON](https://files.ducky.wiki/share/spoofify_presets/duckytheme.json)
+
+    `}>
+        <img src="/images/spoofify_examples/ducky.png" />
+        
+        
+    </Frame>
+    <Frame>
+        <Column>
+            <Color variant="compact">
+                <Color.Row>
+                    <Color.Item value="#dfc050" name="BG 1" />
+                    <Color.Item value="#f2cd51" name="BG 2" />
+                    
+                </Color.Row>
+                <Color.Row>
+                    <Color.Item value="#2E1200" name="SHADOW" />
+                    <Color.Item value="#d3ae19" name="ACC TEXT" />
+                    <Color.Item value="#2E1200" name="BORDER" />
+                </Color.Row>
+            </Color>
+            <br />
+            <hr />
+            <ResponseField name="Background Mode" type="Gradient" />
+            <ResponseField name="Border Width" type="4px" post={["DEFAULT"]} />
+            <ResponseField name="Border Radius" type="16px" />
+            <ResponseField name="Show Album?" type="Yes" />
+        </Column>
+        
+    </Frame>
+</Expandable>
+
+<Expandable title="Green Theme">
+    <Frame caption={`Theme: "Green" | [Raw JSON](https://files.ducky.wiki/share/spoofify_presets/green.json)
+
+    `}>
+        <img src="/images/spoofify_examples/green.png" />
+        
+        
+    </Frame>
+    <Frame>
+        <Column>
+            <Color variant="compact">
+                <Color.Row>
+                    <Color.Item value="#6ca155" name="BACKGROUND" />
+                    <Color.Item value="#186117" name="SHADOW" />
+                    <Color.Item value="#54ab49" name="ACC TEXT" />
+                    <Color.Item value="#083c07" name="BORDER" />
+                </Color.Row>
+            </Color>
+            <br />
+            <hr />
+            <ResponseField name="Background Mode" type="Solid" />
+            <ResponseField name="Border Width" type="4px" post={["DEFAULT"]} />
+            <ResponseField name="Border Radius" type="40px" post={["MAX"]} />
+            <ResponseField name="Show Album?" type="No" />
+        </Column>
+        
+    </Frame>
+</Expandable>
+
+<Expandable title="TikTok Theme">
+    <Frame caption={`Theme: "TikTok" | [Raw JSON](https://files.ducky.wiki/share/spoofify_presets/tiktok.json)
+
+    `}>
+        <img src="/images/spoofify_examples/tiktok.png" />
+        
+        
+    </Frame>
+    <Frame>
+        <Column>
+            <Color variant="compact">
+                <Color.Row>
+                    <Color.Item value="#B31543" name="BG 1" />
+                    <Color.Item value="#060005" name="BG 2" />
+                    
+                </Color.Row>
+                <Color.Row>
+                    <Color.Item value="#54051A" name="SHADOW" />
+                    <Color.Item value="#6cb2af" name="ACC TEXT" />
+                    <Color.Item value="#F6004D" name="BORDER" />
+                </Color.Row>
+            </Color>
+            <br />
+            <hr />
+            <ResponseField name="Background Mode" type="Gradient" />
+            <ResponseField name="Border Width" type="4px" post={["DEFAULT"]} />
+            <ResponseField name="Border Radius" type="4px" post={["DEFAULT"]} />
+            <ResponseField name="Show Album?" type="Yes" />
+        </Column>
+        
+    </Frame>
+</Expandable>

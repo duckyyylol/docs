@@ -214,6 +214,14 @@
             ]
           },
           {
+            "group": "User Guides",
+            "icon": "book-open",
+            "pages": [
+              "projects/spoofify/guides/importing_themes",
+              "projects/spoofify/guides/twitch_commands"
+            ]
+          },
+          {
             "group": "Browser Overlays",
             "root": "projects/spoofify/overlays",
             "icon": "eye",
