@@ -15,6 +15,13 @@ At this point, you should have communication with Ducky and she should guide you
 ### Setting up Spoofify
 <Expandable title="Steps to set up Spoofify" defaultOpen>
     <Steps>
+    <Step title="Claim your spoofify.live URL">
+        ```
+        <your choice>.spoofify.live
+        ```
+
+        Let Ducky know what you'd like before we continue!
+    </Step>
     <Step title="Create a Spotify Developer Application">
         This is the step that generates the required credentials for Spoofify to fetch data from your Spotify account.
 
@@ -50,7 +57,7 @@ At this point, you should have communication with Ducky and she should guide you
             ```
         </ParamField>
 
-        <ParamField body="Redirect URI" post={["🦆 Provided by Ducky"]} required>
+        <ParamField body="Redirect URI" post={["https://<you>.spoofify.live/auth"]} required>
             The URL that Spotify will redirect you to after logging in.
         </ParamField>
 

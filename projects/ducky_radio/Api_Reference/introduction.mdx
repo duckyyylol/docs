@@ -26,10 +26,29 @@ Once running, the API can be accessed at [`http://localhost:1234/api`](http://lo
     <Step title="Send GET Request">
         Run the following command in the terminal of your choice
         
-        ```bash
-        curl --request GET \
+        
+            ```bash
+            curl --request GET \
         --url http://localhost:1234/api/tracks/nowplaying
-        ```
+            ```
+            <RequestExample dropdown>
+            ```bash
+            curl --request GET \
+        --url http://localhost:1234/api/tracks/nowplaying
+            ```
+            ```js
+            const requestOptions = {
+                method: "GET",
+                redirect: "follow"
+            };
+
+            fetch("http://localhost:1234/api/tracks/nowplaying", requestOptions)
+                .then((response) => response.text())
+                .then((result) => result.data ? console.log(result.data) : console.error(result.error))
+                .catch((error) => console.error(error));
+            
+            ```
+            </RequestExample>
 
     </Step>
     <Step title="😎 Observe">

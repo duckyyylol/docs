@@ -7,7 +7,7 @@ description: "Displays the current song and album art in a card format"
 
 <Frame caption={`Now Playing Card Overlay | Default Settings
 
-https://<spoofify_url>/overlays/now-playing`}>
+https://&lt;you&gt;.spoofify.live/overlays/now-playing`}>
     <img src="/images/spoofify_nowplaying_card.png" />
 </Frame>
 
@@ -17,9 +17,9 @@ https://<spoofify_url>/overlays/now-playing`}>
 
 ## Browser Source URL
 ```url
-https://{spoofify_url}/overlays/now-playing
+https://<you>.spoofify.live/overlays/now-playing
 ```
-<ResponseField name="spoofify_url" type="🦆 Provided by Ducky" required/>
+<ResponseField name="you" type="Your Spoofify Subdomain" required/>
 
 #### Browser Source Dimensions
 <ResponseField name="width" type="800" required/>
@@ -58,9 +58,10 @@ https://{spoofify_url}/overlays/now-playing
 ### Customization
 Customization options can be found on the Spoofify dashboard. Head to the home page and click "Dashboard" at the top, or navigate to the url below.
 ```url
-https://{spoofify_url}/dashboard
+https://<you>.spoofify.live/dashboard
 ```
-<ResponseField name="spoofify_url" type="🦆 Provided by Ducky" required/>
+
+<ResponseField name="you" type="Your Spoofify Subdomain" required/>
 
 #### Customization Options
 <ResponseField name="Background Mode" type="Gradient | Solid" default="Gradient">
