@@ -43,7 +43,7 @@ Once running, the API can be accessed at [`http://localhost:1234/api`](http://lo
             };
 
             fetch("http://localhost:1234/api/tracks/nowplaying", requestOptions)
-                .then((response) => response.text())
+                .then((response) => response.json())
                 .then((result) => result.data ? console.log(result.data) : console.error(result.error))
                 .catch((error) => console.error(error));
             
