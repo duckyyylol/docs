@@ -1,0 +1,65 @@
+---
+title: "vmlinuz-linux not found"
+description: "My face when the whole kernel shits itself and dies"
+hidden: true
+---
+<Steps>
+    <Step title="Boot & update Arch ISO">
+        ```bash
+        pacman -Sy archlinux-keyring
+        ``` 
+    </Step>
+    <Step title="Mount Filesystem">
+        ```bash
+        mount /dev/nvme0n1p3 /mnt
+        ``` 
+
+        ```bash
+        mount /dev/nvme0n1p1 /mnt/boot/efi
+        ```
+    </Step>
+    <Step title="Reinstall Kernel">
+        ```bash
+        pacstrap -K /mnt linux linux-firmware base
+        ```
+    </Step>
+    <Step title="Enter chroot">
+        ```bash
+        arch-chroot /mnt
+        ```
+    </Step>
+    <Step title="Update NVIDIA drivers for good measure">
+        ```bash
+        pacman -S nvidia-open nvidia-utils nvidia-settings
+        ```
+        Ensure the following is found in **/etc/mkinitcpio.conf** 
+        ```typescript
+        MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+        ```
+    </Step>
+    <Step title="Update initramfs and grub">
+        ```bash
+        mkinitcpio -P
+        ``` 
+
+        ```bash
+        grub-mkconfig -o /boot/grub/grub.cfg
+        ```
+    </Step>
+    <Step title="Exit chroot, Unmount, Reboot">
+        ```bash
+        exit
+        ``` 
+        ```bash
+        umount -R /mnt
+        ```
+        ```bash
+        reboot
+        ```
+    </Step>
+    <Step title="Post-Reboot">
+        ```bash
+        sudo pacman -Syu
+        ```
+    </Step>
+</Steps>
