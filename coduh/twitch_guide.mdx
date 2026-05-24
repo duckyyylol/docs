@@ -1,0 +1,294 @@
+---
+title: "ShortBotduh Twitch Guide"
+hidden: true
+---
+### Table of Contents
+<AccordionGroup>
+    <Accordion title="Commands">
+        - [Utility Commands](#-utility-commands)
+        - [Economy Commands](#-economy-commands)
+        - [Fun Commands](#-fun-commands)
+        - [Moderator Commands](#-moderator-commands)
+        - [Custom Commands](#-custom-commands)
+    </Accordion>
+    <Accordion title="Custom Command Variables">
+        - [\{random\}](#random)
+        - [\{weatherin\}](#weatherin)
+        - [\{coinflip\}](#coinflip)
+        - [\{sender\}](#sender)
+        - [\{channel\}](#channel)
+        - [\{touser\}](#touser)
+        - [\{game\}](#game)
+        - [\{shoutout\}](#shoutout)
+        - [\{settitle\}](#settitle)
+        - [\{settags\}](#settags)
+        - [\{setgame\}](#setgame)
+        - [\{accountage\}](#accountage)
+        - [\{followage\}](#followage)
+        - [\{urlfetch\}](#urlfetch)
+        - [\{pin\}](#pin)
+    </Accordion>
+</AccordionGroup>
+
+---
+#### Commands
+
+### 🛠️ Utility Commands
+
+<Expandable title="Utility Commands">
+    ### !discord
+    > *Sends a link to Coduh's Discord server in chat*
+    <Expandable title="Aliases">
+        > - `!dc`
+        > - `!disc`
+        > - `!discordserver`
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!discord`">
+       <img src="/images/coduh/twitch/!discord.png" />
+    </Frame>
+
+    ### !tiktok
+    > *Sends a link to Coduh's TikTok in chat*
+    <Expandable title="Aliases">
+        > - `!tt`
+        > - `!clockapp`
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!tiktok`">
+       <img src="/images/coduh/twitch/!tiktok.png" />
+    </Frame>
+
+    ### !roomcode
+    > *Sends the current room code in chat, if set*
+    <Expandable title="Aliases">
+        > - `!rc`
+        > - `!join`
+        > - `!lobby`
+        > - `!room`
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!roomcode`">
+       <img src="/images/coduh/twitch/!roomcode.png" />
+    </Frame>
+
+    <br />
+</Expandable>
+
+### 💰 Economy Commands
+
+<Expandable title="Economy Commands">
+    ### !slots
+    > *Roll a specified number of points for a random chance to win more*
+    <Expandable title="Aliases">
+        > - `!roll`
+        > - `!gamble`
+    </Expandable>
+    <br />
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="amount" type="number" required>
+            The amount of points to gamble
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!slots 500`">
+       <img src="/images/coduh/twitch/!slots.png" />
+    </Frame>
+
+    ### !points
+    > *See how many points you have, or another user has*
+    <Expandable title="Aliases">
+        > - `!pts`
+    </Expandable>
+    <br />
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="username" type="User" default="Sender">
+            The user who's points you'd like to check
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!points @ShortBotduh`">
+       <img src="/images/coduh/twitch/!points.png" />
+    </Frame>
+
+    <br />
+</Expandable>
+
+### 😂 Fun Commands
+
+<Expandable title="Fun Commands">
+    ### !nuke
+    > *Time yourself out for 1 second, deleting your messages from chat*
+    <Expandable title="Aliases">
+        > - `!seppuku`
+        > - `!kms`
+    </Expandable>
+
+    <br />
+</Expandable>
+
+### 💰 Moderator Commands
+
+<Expandable title="Moderator Commands">
+    ### !points add
+    > *Add points to a user's balance*
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="username" type="User" required>
+            The user who you'd like to add points to
+        </ResponseField>
+        <ResponseField name="amount" type="number" required>
+            The number of points to add to the user
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!points add @ShortBotduh 50`">
+       <img src="/images/coduh/twitch/!points_add.png" />
+    </Frame>
+
+    ### !points set
+    > *Set a user's point balance*
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="username" type="User" required>
+            The user who's point balance you'd like to set
+        </ResponseField>
+        <ResponseField name="amount" type="number" required>
+            The number of points to set the user's balance to
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!points set @ShortBotduh 100`">
+       <img src="/images/coduh/twitch/!points_set.png" />
+    </Frame>
+
+    ### !points remove
+    > *Remove points from a user's balance*
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="username" type="User" required>
+            The user who you'd like to remove points from
+        </ResponseField>
+        <ResponseField name="amount" type="number" required>
+            The number of points to remove from the user
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!points remove @ShortBotduh 25`">
+       <img src="/images/coduh/twitch/!points_remove.png" />
+    </Frame>
+
+    ### !raffle
+    > *Start a raffle for viewers to enter to win points*
+
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="amount" type="number" default={1000}>
+            The amount of points the winner of the raffle will receive
+        </ResponseField>
+    </Expandable>
+    <Tip>
+    Viewers must type "pickme" in the chat to enter the raffle!
+    </Tip>
+    <br />
+    <Frame caption="**Example Usage**: `!raffle`">
+       <img src="/images/coduh/twitch/!raffle.png" />
+    </Frame>
+
+    <br />
+</Expandable>
+
+### 🤖 Custom Commands
+
+<Expandable title="Custom Commands" defaultOpen>
+    ### !addcommand
+    > *Create a new custom command*
+    <Expandable title="Aliases">
+        > - `!ac`
+        > - `!addcmd`
+    </Expandable>
+    <br />
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="trigger" required>
+            What a user types in chat to trigger the command
+        </ResponseField>
+        <ResponseField name="response" required>
+            What the bot responds with when a user triggers the command. Supports [variables](#variables)
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!addcmd !ping 🏓 Pong!`">
+       <img src="/images/coduh/twitch/!addcommand.png" />
+    </Frame>
+
+    ### !editcommand
+    > *Change the response of a previously created custom command*
+    <Expandable title="Aliases">
+        > - `!ec`
+        > - `!editcmd`
+        > - `!changecmd`
+    </Expandable>
+    <br />
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="trigger" required>
+            The trigger of an existing custom command
+        </ResponseField>
+        <ResponseField name="new_response" type="OR -level=">
+            Replaces the current command's response.
+        </ResponseField>
+        <ResponseField name="-level=" type="OR new_response">
+            `-level=x` sets the required userlevel of the specified custom command
+
+            > - **Broadcaster**: `-level=0`
+            > - **Mod**: `-level=2`
+            > - **VIP**: `-level=3`
+            > - **Viewer**: `-level=4`
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!editcmd !ping Ping?`">        
+       <img src="/images/coduh/twitch/!editcommand.png" />
+    </Frame>
+    <br />
+    <Frame caption="**Example Usage**: `!editcmd !ping -level=2`">
+       <img src="/images/coduh/twitch/!editcommand_level.png" />
+    </Frame>
+
+    ### !movecommand
+    > *Changes the trigger of a previously created custom command*
+    <Expandable title="Aliases">
+        > - `!mvcommand`
+        > - `!movecmd`
+        > - `!swapcmd`
+        > - `!swapcommand`
+    </Expandable>
+    <br />
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="trigger" required>
+            The trigger of an existing custom command
+        </ResponseField>
+        <ResponseField name="new_trigger" required>
+            Replaces the current command's trigger.
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!movecommand !ping !ding`">
+       <img src="/images/coduh/twitch/!movecommand.png" />
+    </Frame>
+
+    ### !deletecommand
+    > *Delete a previously created custom command*
+    <Expandable title="Aliases">
+        > - `!delcmd`
+        > - `!removecommand`
+        > - `!delcommand`
+    </Expandable>
+    <br />
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="trigger" required>
+            The trigger of the existing custom command you'd like to delete
+        </ResponseField>
+    </Expandable>
+    <br />
+    <Frame caption="**Example Usage**: `!delcmd !ding`">
+       <img src="/images/coduh/twitch/!deletecommand.png" />
+    </Frame>
+
+    <br />
+</Expandable>
