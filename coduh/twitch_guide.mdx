@@ -12,6 +12,8 @@ hidden: true
         - [Custom Commands](#-custom-commands)
     </Accordion>
     <Accordion title="Custom Command Variables">
+        - [\{args\}](#args)
+        - [\{query\}](#query)
         - [\{random\}](#random)
         - [\{weatherin\}](#weatherin)
         - [\{coinflip\}](#coinflip)
@@ -191,12 +193,32 @@ hidden: true
        <img src="/images/coduh/twitch/!raffle.png" />
     </Frame>
 
+    ### !setroomcode
+    > *Set the room code to be viewed with !code, also pins the code*
+
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="room_code" required>
+            The room code to set
+        </ResponseField>
+    </Expandable>
+    <Tip>
+        ShortBotduh will automatically pin the room code with appropriate context for the current stream game.
+        
+        - **Mario Kart** `Room Code -> <code>`
+        - **Jackbox** `Join the Audience -> <code>`
+        - **Other** `<code>`
+    </Tip>
+    <br />
+    <Frame caption="**Example Usage**: `!setroomcode AEF FE0`">
+       <img src="/images/coduh/twitch/!setroomcode.png" />
+    </Frame>
+
     <br />
 </Expandable>
 
 ### 🤖 Custom Commands
 
-<Expandable title="Custom Commands" defaultOpen>
+<Expandable title="Custom Commands">
     ### !addcommand
     > *Create a new custom command*
     <Expandable title="Aliases">
@@ -292,3 +314,195 @@ hidden: true
 
     <br />
 </Expandable>
+
+---
+
+#### Variables
+
+### \{args\}
+> *Returns the specified argument from the ran command*
+
+#### Variable Syntax
+```ts
+// (out of "!points add @duckyyylive 3")
+{0} // {0} = "add"
+{1} // {0} = "@duckyyylive"
+{2} // {0} = "3"
+```
+
+### \{query\}
+> *Returns the full string following the ran command*
+
+#### Variable Syntax
+```ts
+// (out of "!points add @duckyyylive 3")
+{query} // "add @duckyyylive 3"
+```
+
+### \{random\}
+> *Returns a random number*
+
+#### Variable Syntax
+```ts
+{random ?min-?max} // Random Number min-max
+{random} // Random Number 0-10 (default)
+```
+<ResponseField name="min" type="number" default={0} />
+<ResponseField name="max" type="number" default={10} />
+
+### \{random\}
+> *Returns the forecast for the specified location*
+
+#### Variable Syntax
+```ts
+{weatherin Search Query} // Same location every time
+{weatherin {query}} // Location the user specifies
+```
+<ResponseField name="Search Query" type="String" default="Hell, Norway" />
+
+### \{coinflip\}
+> *Returns "heads" or "tails" randomly*
+
+#### Variable Syntax
+```ts
+{coinflip}
+```
+
+### \{sender\}
+> *Returns the username of the user who sent the command*
+
+#### Variable Syntax
+```ts
+// (command sent from @duckyyylive)
+{sender} // "duckyyylive" 
+```
+
+### \{touser\}
+> *Returns the username of the user mentioned in the command. If no user is mentioned, returns the command sender*
+
+#### Variable Syntax
+```ts
+// (out of !ping @duckyyylive)
+{touser} // "duckyyylive"
+```
+
+### \{channel\}
+> *Returns the username of the channel the command was sent in*
+
+#### Variable Syntax
+```ts
+// (command sent in @coduh/chat)
+{channel} // "coduh"
+```
+
+### \{game\}
+> *Returns the last played game for the specified user, or the current channel*
+
+#### Variable Syntax
+```ts
+// (command sent in @coduh/chat, playing "Jackbox Party Packs")
+{game} // "Jackbox Party Packs"
+{game {sender}} // The game of the command sender
+{game {touser}} // The game of the mentioned user
+```
+
+### \{accountage\}
+> *Returns the age of the specified user's Twitch account*
+
+#### Variable Syntax
+```ts
+// (command sent by @duckyyylive)
+{accountage} // @duckyyylive's account age
+{accountage {sender}} // The account age of the command sender
+{accountage {touser}} // The account age of the mentioned user
+```
+
+### \{followage\}
+> *Returns how long the specified user has been following the current channel*
+
+#### Variable Syntax
+```ts
+// (command sent in @coduh/chat by @duckyyylive)
+{followage} // @duckyyylive's followage to @coduh 
+{followage {sender}} // The followage of the command sender to @coduh
+{followage {touser}} // The followage of the mentioned user to @coduh
+```
+
+### \{shoutout\}
+> *Attempts a Twitch shoutout (chat banner) for the specified user*
+
+<Tip>
+The channel must be live to perform a shoutout!
+</Tip>
+
+#### Variable Syntax
+```ts
+{shoutout {sender}} // Shoutout the command sender
+{shoutout {touser}} // Shoutout the mentioned user
+```
+
+### \{setgame\}
+> *Sets the stream game, and returns it*
+
+#### Variable Syntax
+```ts
+{setgame Mario Kart World} // Set the game to "Mario Kart World"
+{setgame {query}} // Set the game to what the user specifies
+```
+
+### \{settitle\}
+> *Sets the stream title, and returns it*
+
+#### Variable Syntax
+```ts
+{settitle Hey Big Head} // Set the title to "Hey Big Head"
+{settitle {query}} // Set the title to what the user specifies
+```
+
+### \{settags\}
+> *Sets the stream tags to a comma separated list of specified tags, and returns them*
+
+#### Variable Syntax
+```ts
+{settags Hey,Big,Head} // Sets 3 tags: "Hey", "Big", "Head"
+{settags {query}} // Set the tags to what the user specifies
+```
+
+### \{pin\}
+> *Pin a specified message to the chat, and return the string*
+
+#### Variable Syntax
+```ts
+{pin Join the Game!} // Pins "Join the Game!" to the chat
+{pin {query}} // Pins what the user specifies to the chat
+```
+
+### \{urlfetch\}
+> *Perform a GET request on the specified URL, and return certain data from a JSON response*
+
+#### Variable Syntax
+```ts
+{urlfetch url data.path ?decode}
+```
+<ResponseField name="url" type="URL" required />
+<ResponseField name="data.path" type="String" required>
+    Specify which data to return from the JSON response
+    ```jsonc
+    // Example Data
+    // URL: https://example.com/bings
+    {
+        data: {
+            bings: [
+                "bong%20bong",
+                "dong"
+            ]
+        }    
+    }
+    ```
+    ```ts
+    {urlfetch https://example.com/bings data.bings.0 decode} // "bong bong" (URL-decoded)
+    ```
+</ResponseField>
+<ResponseField name="decode" type="string">
+    Whether or not to URL-decode the response before returning it
+</ResponseField>
