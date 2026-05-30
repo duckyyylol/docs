@@ -30,6 +30,7 @@ hidden: true
         - [\{followage\}](#followage)
         - [\{urlfetch\}](#urlfetch)
         - [\{pin\}](#pin)
+        - [\{timer\}](#timer)
     </Accordion>
 </AccordionGroup>
 
@@ -74,6 +75,9 @@ hidden: true
     <Frame caption="**Example Usage**: `!roomcode`">
        <img src="/images/coduh/twitch/!roomcode.png" />
     </Frame>
+
+    ### !timer
+    > *Replies with the remaining duration of the on-screen timer*
 
     <br />
 </Expandable>
@@ -214,6 +218,33 @@ hidden: true
        <img src="/images/coduh/twitch/!setroomcode.png" />
     </Frame>
 
+    ### !timer set
+    > *Set the on-screen timer's duration*
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="duration" required>
+            The duration of the timer, 20m for 20 minutes, etc
+        </ResponseField>
+    </Expandable>
+
+    ### !timer label
+    > *Set the on-screen timer's label*
+    <Expandable title="Arguments" defaultOpen>
+        <ResponseField name="new_label | 'default'" required>
+            The label of the timer, "default" for the default label
+        </ResponseField>
+    </Expandable>
+
+    ### !timer show
+    > *Show the on-screen timer*
+
+    ### !timer hide
+    > *Hide the on-screen timer*
+
+    ### !timer pause
+    > *Pause the on-screen timer*
+
+    ### !timer unpause
+    > *Unpause the on-screen timer*
     <br />
 </Expandable>
 
@@ -477,6 +508,23 @@ The channel must be live to perform a shoutout!
 {pin Join the Game!} // Pins "Join the Game!" to the chat
 {pin {query}} // Pins what the user specifies to the chat
 ```
+
+### \{timer\}
+> *Start a timer for the specified duration, with an optional label*
+
+#### Variable Syntax
+```ts
+{timer 20m Practice Time :)} // Sets a timer for 20 minutes with the label "Practice Time :)"
+{timer {query}} // Sets a timer with a duration the user specifies
+```
+
+<Note>
+    **When using \{query\} in \{timer\}**
+    
+    User-specified labels via the query variable **are not supported**, i.e. \{query\} = "10m My Timer!"
+
+    \{query\} must be a duration only, or the timer will be set to 00:00
+</Note>
 
 ### \{urlfetch\}
 > *Perform a GET request on the specified URL, and return certain data from a JSON response*
