@@ -37,6 +37,10 @@ hidden: true
 ---
 #### Commands
 
+<Note>
+    A full command list with custom commands can be found [**here**](https://shortbotduh.ducky.wiki/commands)
+</Note>
+
 ### 🛠️ Utility Commands
 
 <Expandable title="Utility Commands">
@@ -208,7 +212,7 @@ hidden: true
     </Expandable>
     <Tip>
         ShortBotduh will automatically pin the room code with appropriate context for the current stream game.
-        
+
         - **Mario Kart** `Room Code -> <code>`
         - **Jackbox** `Join the Audience -> <code>`
         - **Other** `<code>`
@@ -296,7 +300,7 @@ hidden: true
         </ResponseField>
     </Expandable>
     <br />
-    <Frame caption="**Example Usage**: `!editcmd !ping Ping?`">        
+    <Frame caption="**Example Usage**: `!editcmd !ping Ping?`">
        <img src="/images/coduh/twitch/!editcommand.png" />
     </Frame>
     <br />
@@ -352,18 +356,18 @@ hidden: true
 #### Variables
 
 ### \{args\}
-> *Returns the specified argument from the ran command*
+> *Returns the specified argument from the command*
 
 #### Variable Syntax
 ```ts
 // (out of "!points add @duckyyylive 3")
 {0} // {0} = "add"
-{1} // {0} = "@duckyyylive"
-{2} // {0} = "3"
+{1} // {1} = "@duckyyylive"
+{2} // {2} = "3"
 ```
 
 ### \{query\}
-> *Returns the full string following the ran command*
+> *Returns the full string following the command*
 
 #### Variable Syntax
 ```ts
@@ -376,11 +380,13 @@ hidden: true
 
 #### Variable Syntax
 ```ts
-{random ?min-?max} // Random Number min-max
+{random ?min-?max ?noformat} // Random Number min-max
 {random} // Random Number 0-10 (default)
+{random 1000-3000 noformat} // Random Number 1000-3000, without commas
 ```
 <ResponseField name="min" type="number" default={0} />
 <ResponseField name="max" type="number" default={10} />
+<ResponseField name="noformat" />
 
 ### \{weatherin\}
 > *Returns the forecast for the specified location*
@@ -406,7 +412,7 @@ hidden: true
 #### Variable Syntax
 ```ts
 // (command sent from @duckyyylive)
-{sender} // "duckyyylive" 
+{sender} // "duckyyylive"
 ```
 
 ### \{touser\}
@@ -455,7 +461,7 @@ hidden: true
 #### Variable Syntax
 ```ts
 // (command sent in @coduh/chat by @duckyyylive)
-{followage} // @duckyyylive's followage to @coduh 
+{followage} // @duckyyylive's followage to @coduh
 {followage {sender}} // The followage of the command sender to @coduh
 {followage {touser}} // The followage of the mentioned user to @coduh
 ```
@@ -520,7 +526,7 @@ The channel must be live to perform a shoutout!
 
 <Note>
     **When using \{query\} in \{timer\}**
-    
+
     User-specified labels via the query variable **are not supported**, i.e. \{query\} = "10m My Timer!"
 
     \{query\} must be a duration only, or the timer will be set to 00:00
@@ -545,7 +551,7 @@ The channel must be live to perform a shoutout!
                 "bong%20bong",
                 "dong"
             ]
-        }    
+        }
     }
     ```
     ```ts
