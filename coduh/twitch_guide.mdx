@@ -287,7 +287,7 @@ hidden: true
         <ResponseField name="trigger" required>
             The trigger of an existing custom command
         </ResponseField>
-        <ResponseField name="new_response" type="OR -level=">
+        <ResponseField name="new_response" type="OR -level= | -cd=">
             Replaces the current command's response.
         </ResponseField>
         <ResponseField name="-level=" type="OR new_response">
@@ -297,6 +297,12 @@ hidden: true
             > - **Mod**: `-level=2`
             > - **VIP**: `-level=3`
             > - **Viewer**: `-level=4`
+        </ResponseField>
+        <ResponseField name="-cd=" type="OR new_response">
+            `-cd=x` sets the cooldown of the custom command in seconds
+
+            > - **30-Second Cooldown**: `-cd=30`
+            > - **No Cooldown**: `-cd=0`
         </ResponseField>
     </Expandable>
     <br />
