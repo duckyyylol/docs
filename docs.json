@@ -15,7 +15,15 @@
       "server": "http://localhost:1234/"
     },
     "examples": {
-      "languages": ["curl", "typescript", "nodejs", "python", "go", "kotlin", "java"]
+      "languages": [
+        "curl",
+        "typescript",
+        "nodejs",
+        "python",
+        "go",
+        "kotlin",
+        "java"
+      ]
     },
     "playground": {
       "display": "simple"
@@ -32,9 +40,7 @@
           {
             "group": "🦆 Home",
             "root": "index",
-            "pages": [
-              "index"
-            ]
+            "pages": ["index"]
           },
           {
             "group": "Minecraft Mods",
@@ -83,6 +89,7 @@
             "expanded": true,
             "pages": [
               "mods/createjukeboxdisplay/installation",
+              "mods/createjukeboxdisplay/creating_displays",
               "mods/createjukeboxdisplay/display_types",
               "mods/createjukeboxdisplay/source_code",
               "mods/createjukeboxdisplay/changelog"
@@ -103,9 +110,7 @@
           {
             "group": "🦆 Back Home",
             "root": "index",
-            "pages": [
-              "index"
-            ]
+            "pages": ["index"]
           }
         ]
       },
@@ -134,7 +139,6 @@
               "projects/ducky_radio/overlays/cover_grid",
               "projects/ducky_radio/overlays/cover_vinyl",
               "projects/ducky_radio/overlays/last_5"
-              
             ]
           },
           {
@@ -148,47 +152,44 @@
                 "group": "Endpoints",
                 "icon": "webhook",
                 "pages": [
-              "projects/ducky_radio/Api_Reference/endpoint/get/current_track",
-              "projects/ducky_radio/Api_Reference/endpoint/get/current_track_title",
-              "projects/ducky_radio/Api_Reference/endpoint/get/current_track_artist",
-              "projects/ducky_radio/Api_Reference/endpoint/get/track_history",
-              "projects/ducky_radio/Api_Reference/endpoint/get/cider/playback_status",
-              "projects/ducky_radio/Api_Reference/endpoint/get/cider/playback_volume",
-              "projects/ducky_radio/Api_Reference/endpoint/post/cider/playback_volume",
-              "projects/ducky_radio/Api_Reference/endpoint/post/cider/play_song_by_id",
-              "projects/ducky_radio/Api_Reference/endpoint/post/cider/play",
-              "projects/ducky_radio/Api_Reference/endpoint/post/cider/pause",
-              "projects/ducky_radio/Api_Reference/endpoint/post/cider/skip",
-              "projects/ducky_radio/Api_Reference/endpoint/post/cider/previous",
-              "projects/ducky_radio/Api_Reference/endpoint/get/icecast/playback_status",
-              "projects/ducky_radio/Api_Reference/endpoint/get/lastfm/playback_status"
-                ] 
+                  "projects/ducky_radio/Api_Reference/endpoint/get/current_track",
+                  "projects/ducky_radio/Api_Reference/endpoint/get/current_track_title",
+                  "projects/ducky_radio/Api_Reference/endpoint/get/current_track_artist",
+                  "projects/ducky_radio/Api_Reference/endpoint/get/track_history",
+                  "projects/ducky_radio/Api_Reference/endpoint/get/cider/playback_status",
+                  "projects/ducky_radio/Api_Reference/endpoint/get/cider/playback_volume",
+                  "projects/ducky_radio/Api_Reference/endpoint/post/cider/playback_volume",
+                  "projects/ducky_radio/Api_Reference/endpoint/post/cider/play_song_by_id",
+                  "projects/ducky_radio/Api_Reference/endpoint/post/cider/play",
+                  "projects/ducky_radio/Api_Reference/endpoint/post/cider/pause",
+                  "projects/ducky_radio/Api_Reference/endpoint/post/cider/skip",
+                  "projects/ducky_radio/Api_Reference/endpoint/post/cider/previous",
+                  "projects/ducky_radio/Api_Reference/endpoint/get/icecast/playback_status",
+                  "projects/ducky_radio/Api_Reference/endpoint/get/lastfm/playback_status"
+                ]
               },
               {
                 "group": "Types",
                 "icon": "brackets-curly",
                 "pages": [
-              "projects/ducky_radio/Api_Reference/types/Track",
-              "projects/ducky_radio/Api_Reference/types/AppleMusicNowPlayingResponse",
-              "projects/ducky_radio/Api_Reference/types/AppleMusicArtwork",
-              "projects/ducky_radio/Api_Reference/types/AppleMusicPlayParams",
-              "projects/ducky_radio/Api_Reference/types/AppleMusicPreview",
-              "projects/ducky_radio/Api_Reference/types/IcecastServerStatus",
-              "projects/ducky_radio/Api_Reference/types/IcecastServerStatistics",
-              "projects/ducky_radio/Api_Reference/types/IcecastServerSource",
-              "projects/ducky_radio/Api_Reference/types/LastFMNowPlayingResponse"
-
-                ] 
+                  "projects/ducky_radio/Api_Reference/types/Track",
+                  "projects/ducky_radio/Api_Reference/types/AppleMusicNowPlayingResponse",
+                  "projects/ducky_radio/Api_Reference/types/AppleMusicArtwork",
+                  "projects/ducky_radio/Api_Reference/types/AppleMusicPlayParams",
+                  "projects/ducky_radio/Api_Reference/types/AppleMusicPreview",
+                  "projects/ducky_radio/Api_Reference/types/IcecastServerStatus",
+                  "projects/ducky_radio/Api_Reference/types/IcecastServerStatistics",
+                  "projects/ducky_radio/Api_Reference/types/IcecastServerSource",
+                  "projects/ducky_radio/Api_Reference/types/LastFMNowPlayingResponse"
+                ]
               }
             ]
           },
           {
             "group": "🦆 Back Home",
             "root": "index",
-            
-            "pages": [
-              "index"
-            ]
+
+            "pages": ["index"]
           }
         ]
       },
@@ -207,9 +208,7 @@
                 "group": "Ducky-Hosted",
                 "icon": "duck",
                 "root": "projects/spoofify/ducky_hosted/starter_guide",
-                "pages": [
-                  "projects/spoofify/ducky_hosted/starter_guide"
-                ] 
+                "pages": ["projects/spoofify/ducky_hosted/starter_guide"]
               }
             ]
           },
@@ -226,10 +225,7 @@
             "root": "projects/spoofify/overlays",
             "icon": "eye",
             "directory": "card",
-            "pages": [
-              "projects/spoofify/overlays/now_playing_card"
-              
-            ]
+            "pages": ["projects/spoofify/overlays/now_playing_card"]
           },
           {
             "group": "API Reference",
@@ -242,33 +238,30 @@
                 "group": "Endpoints",
                 "icon": "webhook",
                 "pages": [
-                "projects/spoofify/Api_Reference/endpoint/get/current_track",
-                "projects/spoofify/Api_Reference/endpoint/get/queue",
-                "projects/spoofify/Api_Reference/endpoint/get/search",
-                "projects/spoofify/Api_Reference/endpoint/post/queue_track"
-                ] 
+                  "projects/spoofify/Api_Reference/endpoint/get/current_track",
+                  "projects/spoofify/Api_Reference/endpoint/get/queue",
+                  "projects/spoofify/Api_Reference/endpoint/get/search",
+                  "projects/spoofify/Api_Reference/endpoint/post/queue_track"
+                ]
               },
               {
                 "group": "Types",
                 "icon": "brackets-curly",
                 "pages": [
-              "projects/spoofify/Api_Reference/types/BasicTrack",
-              "projects/spoofify/Api_Reference/types/SpotifyPlaybackState",
-              "projects/spoofify/Api_Reference/types/SpotifyTrack",
-              "projects/spoofify/Api_Reference/types/SpotifyArtist",
-              "projects/spoofify/Api_Reference/types/SpotifyUser"
-
-                ] 
+                  "projects/spoofify/Api_Reference/types/BasicTrack",
+                  "projects/spoofify/Api_Reference/types/SpotifyPlaybackState",
+                  "projects/spoofify/Api_Reference/types/SpotifyTrack",
+                  "projects/spoofify/Api_Reference/types/SpotifyArtist",
+                  "projects/spoofify/Api_Reference/types/SpotifyUser"
+                ]
               }
             ]
           },
           {
             "group": "🦆 Back Home",
             "root": "index",
-            
-            "pages": [
-              "index"
-            ]
+
+            "pages": ["index"]
           }
         ]
       }

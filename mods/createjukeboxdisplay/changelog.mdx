@@ -5,9 +5,45 @@ icon: "code-commit"
 ---
 Updates to Create: Jukebox Display over time
 
+<Update label="v1.21.1-1.2" description="The 'Ducky remembered her password' Update" tags={['August 25, 2026']}>
+    <Frame>
+        <img src="/images/createjukeboxdisplay_1.2-1.21.1.png" />
+    </Frame>
+    ## Changes
+    1. Updated project license to [MIT](https://mit-license.org/)
+    2. Reduced the refresh time for all display types to 1 second
+        - Yay proper elapsed times!
+    3. Added compatibility with [Etched](https://modrinth.com/mod/etched)
+        - The **Album Jukebox** is now a display source
+        - Custom discs will now display properly when played from a Jukebox
+    4. Added the following display types to the **Album Jukebox**:
+    <Tabs>
+        <Tab title="Next Track in Album">
+            Displays the full title and artist of the next track in the album
+            #### Example Output
+            Kevin Macleod - Adventure Meme
+        </Tab>
+        <Tab title="Next Title in Album">
+            Displays the title of the next track in the album
+            #### Example Output
+            Adventure Meme
+        </Tab>
+        <Tab title="Next Artist in Album">
+            Displays the artist of the next track in the album
+            #### Example Output
+            Kevin Macleod
+        </Tab>
+        <Tab title="Track Provider">
+            If available, displays the provider (Bandcamp, SoundCloud, etc) of the currently playing song
+            #### Example Output
+            Bandcamp
+        </Tab>
+    </Tabs>
+</Update>
+<hr/>
 <Update label="v1.21.1-1.1" description="Modrinth: Still Under Review" tags={['April 24, 2026']}>
     <Frame>
-        <img src="/images/createjukeboxdisplay_1.1-1.21.1.png" alt="Two adjacent smiley faces built with Dye Template blocks" />
+        <img src="/images/createjukeboxdisplay_1.1-1.21.1.png" />
     </Frame>
     ## Changes
     1. Added the following display types:
